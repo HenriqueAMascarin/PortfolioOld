@@ -50,22 +50,17 @@ a{
     border-radius: 10px;
 }
 
-.below{
-    position: relative;
-    left: 0px;
-    top: -20px;
-}
-
 .border{
     height: 40px;
+    width: auto;
     display: block;
-    z-index: -1;
+    z-index: 0;
     background: rgb(33, 33, 33);
     border-radius: 0px 0px 90% 90%;
     position: relative;
     left: 0px;
-    top: -1px;
-    box-shadow: 0px -0px 10px 10px rgba(0, 0, 0, 1);
+    top: 14px;
+    box-shadow: 0px 10px 10px -0px rgba(0, 0, 0, 1);
 }
 
 .projects{
@@ -189,7 +184,7 @@ a{
     position: absolute;
     width: 100%;
     background-repeat: no-repeat;
-    background-size: clamp(26em, 75vw, 30em) 50em;
+    background-size: clamp(26em, 120vw, 30em) 50em;
     background-position: bottom center;
 }
 
@@ -215,7 +210,7 @@ a{
 .main-section img{
     filter: drop-shadow(4px 0px 0px rgb(213, 52, 83))  
             drop-shadow(-4px 0px 0px rgb(255, 255, 255)); 
-    width: clamp(22em, 65vw, 25em);
+    width: clamp(17em, 100vw, 25em);
     height: auto;
     animation: foto 5s infinite ease-in-out;
     
@@ -228,7 +223,8 @@ a{
     
 }
 .pixel-art{ /* 16 x 31 */
-    filter: drop-shadow(0px 0px 6px rgb(213, 52, 83));
+    filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 1))
+            drop-shadow(0px 0px 6px rgba(213, 52, 83, 1));
 }
 .pixel-art:nth-child(1){
     transform: translate(15px,170px);
@@ -245,27 +241,134 @@ a{
 
 .border-info{
     background: rgb(38, 38, 38);
-    z-index: -4;
-    top: -21px;
 }
 .info{
     background: #262626;
     padding-top: 130px;
-    z-index: -2;
-    height: 750px;
+    height: 707px;
 }
 
+.border-habilities{
+    background-color: #262626;
+    top: 235px;
+    left: 0;
+}
 .abilities{
     background: #262626;
     padding-top: 120px;
-    z-index: -5;
-    height: 750px;
-    top: -40px;
+    height: 600px;
 }
 .tecnologies{
-    width: 100px;
-    filter: drop-shadow(0px 0px 6px rgb(213, 52, 83));
+    width: 200px;
+    filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 1))
+            drop-shadow(0px 0px 6px rgba(213, 52, 83, 1));
+    display: inline-block;
+    margin-top: 50px;
 }
-.tecnologies:nth-of-type(img){
-    background-color: red;
+.logos{
+    filter: drop-shadow(0px 0px 1px rgb(255, 255, 255));
+}
+.logos:nth-child(1){
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 110px;
+}
+.logos:nth-child(2){
+    position: absolute;
+    left: 50px;
+    top: 70px;
+    width: 110px
+}
+.logos:nth-child(3){
+    position: absolute;
+    left: 80px;
+    top: 22px;
+    width: 110px;
+}
+
+.principal-projects{
+    background-color: rgb(58, 58, 58);
+    padding-top: 120px;
+    height: 650px;
+    
+}
+
+.projects{
+    display: inline-block;
+    width: 300px;
+    height: auto;
+    margin-top: 30px;
+}
+.div-projects{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.div-projects h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #d53453;
+}
+.image-project{
+    width: 300px;
+    height: auto;
+    filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 1))
+            drop-shadow(0px 0px 6px rgba(213, 52, 83, 1));
+}
+
+.span-project{
+    background-color: #d53453;
+    border-radius: 100%;
+    width: 52px;
+    height: 52px;
+    display: inline-flex;
+    justify-content: center; 
+    filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 1))
+            drop-shadow(0px 0px 6px rgba(213, 52, 83, 1));
+}
+.logo-project{
+    width: 28px;
+    height: auto;
+    align-self: center;
+    filter: drop-shadow(0px 0px 1px rgba(255, 255, 255,1));
+}
+.span-project:nth-child(1){
+    position: relative;
+    top: -45px;
+    left: 120px;
+}
+.span-project:nth-child(2){
+    position: relative;
+    top: -75px;
+    left: 94px;
+}
+.span-project:nth-child(3){
+    position: relative;
+    top: -105px;
+    left: 68px;
+}
+
+.selection-balls{
+    margin-top: 10px;
+}
+
+.ball{
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff;
+    display: inline-block;
+    border-radius: 100%;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 1),
+                0px 0px 6px rgba(213, 52, 83, 1);
+}
+
+.main-footer{
+    background-color: rgb(31, 31, 31);
+    
+}
+.main-footer p {
+    margin-bottom: 0;
 }
