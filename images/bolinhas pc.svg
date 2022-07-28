@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1775" height="876" viewBox="0 0 1775 876">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d53453;
+        fill-rule: evenodd;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="109" y="239" width="1775" height="876" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="4.583"/>
+      <feFlood result="flood" flood-color="#d53453" flood-opacity="0.38"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="Elipse_2" data-name="Elipse 2" class="cls-1" d="M897.5,270A28.5,28.5,0,1,1,869,298.5,28.5,28.5,0,0,1,897.5,270ZM1025,484a16,16,0,1,1-16,16A16,16,0,0,1,1025,484ZM152.5,843a5.5,5.5,0,1,1-5.5,5.5A5.5,5.5,0,0,1,152.5,843Zm696,174a28.5,28.5,0,1,1-28.5,28.5A28.5,28.5,0,0,1,848.5,1017ZM227,261a17,17,0,1,1-17,17A17,17,0,0,1,227,261ZM1848,969a13,13,0,1,1-13,13A13,13,0,0,1,1848,969ZM1685.5,516a14.5,14.5,0,1,1-14.5,14.5A14.5,14.5,0,0,1,1685.5,516Zm93-172a30.5,30.5,0,1,1-30.5,30.5A30.5,30.5,0,0,1,1778.5,344ZM144.5,837A13.5,13.5,0,1,1,131,850.5,13.5,13.5,0,0,1,144.5,837Zm434,226a14.5,14.5,0,1,1-14.5,14.5A14.5,14.5,0,0,1,578.5,1063ZM630,454a26,26,0,1,1-26,26A26,26,0,0,1,630,454Z" transform="translate(-109 -239)"/>
+</svg>
