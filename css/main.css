@@ -1,13 +1,11 @@
 @charset "UTF-8";
 
-
 html{
     font-family: 'Farro', Arial, Helvetica, sans-serif;
     text-align: center;
-    color: #ffffff;
 }
 
-h1 span{
+.tittle-break span{
     display: block;
 }
 
@@ -17,6 +15,10 @@ h1,h2,h3{
     font-size: 35px;
     padding: 0 10px;
     font-weight: bold;
+    color: #d53453;
+}
+span{
+    color: #ffffff;
 }
 
 p{
@@ -25,6 +27,7 @@ p{
     padding: 0 10px;
     text-shadow: 0px 0px 15px #000000;
     font-weight: normal;
+    color: #ffffff;
 }
 
 ul{
@@ -36,7 +39,7 @@ ul{
 a{
     color: #ffffff;
     text-decoration: none;
-    
+    font-weight: bold;
 }
 
 ::-webkit-scrollbar{
@@ -50,24 +53,6 @@ a{
     border-radius: 10px;
 }
 
-.border{
-    height: 40px;
-    width: auto;
-    display: block;
-    z-index: 0;
-    background: rgb(33, 33, 33);
-    border-radius: 0px 0px 90% 90%;
-    position: relative;
-    left: 0px;
-    top: 14px;
-    box-shadow: 0px 10px 10px -0px rgba(0, 0, 0, 1);
-}
-
-.projects{
-    width: 30px;
-    height: 30px;
-}
-
 .hidden{
     width: 0;
     height: 0;
@@ -76,10 +61,16 @@ a{
     display: block;
 }
 
-.texto-vermelho{
+.red-text{
     color: #d53453;
 }
 
+.main-header{
+    position: relative;
+    left: 0px;
+    top: 0px;
+    z-index: 2;
+}
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -110,7 +101,18 @@ a{
 .nav-item{
     margin: 14px 0;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 22px;
+}
+
+.nav-link{
+    color: #ffffff;
+    text-shadow: none;
+    transition: .4s all cubic-bezier(.57,.21,.69,1.25);
+    font-size: inherit;
+}
+.nav-link:hover{
+    color: #d53453;
+    text-shadow: 2px 2px #ffffff;
 }
 
 .nav-menu.active{
@@ -153,29 +155,32 @@ a{
     margin-left: 20px;
 }
 .icons a{
-    transition: 0.5s color cubic-bezier(.57,.21,.69,1.25);
+    transition: .4s color cubic-bezier(.57,.21,.69,1.25);
 }
 .icons a:hover{
     color: #d53453;
 }
 
 .logotipo{
-    font-size: 4rem;
+    font-size: 80px;
     display: inline-block;
     font-weight: bold;
     margin: 0;
 }
 
-.main-header{
-    position: relative;
-    left: 0px;
-    top: 0px;
-    z-index: 1;
-}
-
 .main-section{
-    background: #212121;
-    height: 840px;
+    background-image: linear-gradient(to top,rgb(38, 38, 38) 4%, rgb(33, 33, 33) 4%);
+}
+.main-section::after{
+    content: "";
+    height: 40px;
+    width: 100%;
+    z-index: 0;
+    background: rgb(33, 33, 33);
+    border-radius: 0px 0px 90% 90%;
+    position: relative;
+    display: block;
+    box-shadow: 0px 10px 10px -0px rgba(0, 0, 0, 1);
 }
 
 .circles{
@@ -184,12 +189,13 @@ a{
     position: absolute;
     width: 100%;
     background-repeat: no-repeat;
-    background-size: clamp(26em, 120vw, 30em) 50em;
+    background-size: clamp(26em, 100vw, 30em) 46em;
     background-position: bottom center;
+    z-index: 1;
 }
 
 .main-section h1{
-    padding-top: 150px;
+    padding-top: 175px;
 }
 
 @keyframes foto{
@@ -207,13 +213,13 @@ a{
     }
 
 }
-.main-section img{
+.photo-henrique{
     filter: drop-shadow(4px 0px 0px rgb(213, 52, 83))  
             drop-shadow(-4px 0px 0px rgb(255, 255, 255)); 
-    width: clamp(17em, 100vw, 25em);
+    width: clamp(16em, 80vw, 25em);
     height: auto;
     animation: foto 5s infinite ease-in-out;
-    
+    margin-top: 40px;
 }
 
 .pixel-arts{
@@ -225,6 +231,8 @@ a{
 .pixel-art{ /* 16 x 31 */
     filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 1))
             drop-shadow(0px 0px 6px rgba(213, 52, 83, 1));
+    position: relative;
+    z-index: 0;
 }
 .pixel-art:nth-child(1){
     transform: translate(15px,170px);
@@ -239,34 +247,47 @@ a{
     height: 186px;
 }
 
-.border-info{
-    background: rgb(38, 38, 38);
-}
 .info{
-    background: #262626;
+    background-image: linear-gradient(to top,rgb(48, 48, 48) 4%, rgb(38, 38, 38) 4%);
     padding-top: 130px;
-    height: 707px;
+}
+.info::after{
+    content: "";
+    height: 40px;
+    width: 100%;
+    z-index: 0;
+    background: rgb(38, 38, 38);
+    border-radius: 0px 0px 90% 90%;
+    position: relative;
+    display: block;
+    box-shadow: 0px 10px 10px -0px rgba(0, 0, 0, 1);
 }
 
-.border-habilities{
-    background-color: #262626;
-    top: 235px;
-    left: 0;
-}
 .abilities{
-    background: #262626;
+    background-image: linear-gradient(to top,rgb(58, 58, 58) 4%,rgb(48, 48, 48) 4%);
     padding-top: 120px;
-    height: 600px;
+}
+.abilities::after{
+    content: "";
+    height: 40px;
+    width: 100%;
+    z-index: 0;
+    background-color: rgb(48, 48, 48);
+    border-radius: 0px 0px 90% 90%;
+    position: relative;
+    display: block;
+    box-shadow: 0px 10px 10px -0px rgba(0, 0, 0, 1);
 }
 .tecnologies{
     width: 200px;
+    height: 200px;
     filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 1))
             drop-shadow(0px 0px 6px rgba(213, 52, 83, 1));
     display: inline-block;
     margin-top: 50px;
 }
 .logos{
-    filter: drop-shadow(0px 0px 1px rgb(255, 255, 255));
+    filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
 }
 .logos:nth-child(1){
     position: absolute;
@@ -289,32 +310,21 @@ a{
 
 .principal-projects{
     background-color: rgb(58, 58, 58);
-    padding-top: 120px;
-    height: 650px;
-    
+}
+.principal-projects h2{
+    padding-top: 70px;
 }
 
 .projects{
-    display: inline-block;
-    width: 300px;
-    height: auto;
-    margin-top: 30px;
-}
-.div-projects{
+    display: block;
+    margin: 30px auto 0;
     position: relative;
     top: 0;
     left: 0;
 }
-.div-projects h2{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #d53453;
-}
+
 .image-project{
-    width: 300px;
-    height: auto;
+    width: clamp(15em, 70vw, 25em);
     filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 1))
             drop-shadow(0px 0px 6px rgba(213, 52, 83, 1));
 }
@@ -322,37 +332,28 @@ a{
 .span-project{
     background-color: #d53453;
     border-radius: 100%;
-    width: 52px;
-    height: 52px;
+    width: 50px;
+    height: 50px;
+    position: relative;
     display: inline-flex;
-    justify-content: center; 
+    justify-content: center;
+    flex-direction: row;
     filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 1))
             drop-shadow(0px 0px 6px rgba(213, 52, 83, 1));
 }
+
 .logo-project{
     width: 28px;
     height: auto;
-    align-self: center;
     filter: drop-shadow(0px 0px 1px rgba(255, 255, 255,1));
-}
-.span-project:nth-child(1){
-    position: relative;
-    top: -45px;
-    left: 120px;
-}
-.span-project:nth-child(2){
-    position: relative;
-    top: -75px;
-    left: 94px;
-}
-.span-project:nth-child(3){
-    position: relative;
-    top: -105px;
-    left: 68px;
 }
 
 .selection-balls{
-    margin-top: 10px;
+    margin: 10px 0 30px;
+    width: 110px;
+    height: 110px;
+    display: inline-block;
+
 }
 
 .ball{
@@ -367,8 +368,79 @@ a{
 
 .main-footer{
     background-color: rgb(31, 31, 31);
-    
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to top,rgb(31, 31, 31) 93%,rgb(58, 58, 58) 93%);
 }
-.main-footer p {
-    margin-bottom: 0;
+.main-footer::before{
+    content: "";
+    height: 40px;
+    width: 100%;
+    display: block;
+    position: relative;
+    border-radius: 90% 90% 0 0;
+    background-color: rgb(31, 31, 31);
+    box-shadow: 0px -10px 10px -0px rgba(0, 0, 0, 1);
+    z-index: 0;
+}
+
+.contact{
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 30px;
+    width: 70%;
+    margin: auto;
+    background-color: rgba(213, 52, 83, 1);
+    border-radius: 30px;
+    position: relative;
+    align-items: center;
+    top: -80px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1),
+                0px 0px 10px rgba(0, 0, 0, 1);
+}
+.contact h2,a{
+    color: #ffffff;
+    text-shadow: none;
+}
+.contact button{
+    background-color: #d53453;
+    width: clamp(8em, 50vw, 12em);
+    height: 70px;
+    margin-top: 30px;
+    border-radius: 30px;
+    border: 2px solid #ffffff;
+    display: block;
+    font-size: 1.4em;
+    transition: .3s all ease-in-out;
+}
+.contact button:hover{
+    transform: scale(2px);
+    box-shadow: 6px 6px 1px #ffffff;
+}
+
+.download{
+    background-color: #d53453;
+    width: clamp(10em, 40vw, 40em);
+    margin: auto;
+    height: 70px;
+    border: transparent;
+    border-radius: 30px;
+    display: block;
+    font-size: 1.4em;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1),
+                0px 0px 10px rgba(0, 0, 0, 1);
+    transition: .3s all ease-in-out;
+}
+.download:hover{
+    box-shadow: 0px 0px 10px rgba(213, 52, 83, 1),
+                0px 0px 10px rgba(213, 52, 83, 1);
+}
+
+.copyright {
+    display: inline-block;
+    margin: 40px 0 15px;
+    padding: 0 30px;
+    color: rgb(107, 106, 106);
+    font-family: 'Farro', Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }

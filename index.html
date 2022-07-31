@@ -8,6 +8,7 @@
     <meta name="keywords" content="Portfólio">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Farro:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -19,13 +20,13 @@
 <body>
 
 
-    <header class="main-header" id="Principal">
+    <header class="main-header">
 
         <nav class="navbar">
-            
+
             <div class="icons">
-                <a href="https://github.com/LuckTheGamers" class="icon-github"><span class="hidden">Github logo</span></a>
-                <a href="https://www.linkedin.com/in/henriqueamasc/" class="icon-linkedin"><span class="hidden">Linkedin logo</span></a>
+                <a href="https://github.com/LuckTheGamers" class="icon-github" target="_blank"><span class="hidden">Github logo</span></a>
+                <a href="https://www.linkedin.com/in/henriqueamasc/" class="icon-linkedin" target="_blank"><span class="hidden">Linkedin logo</span></a>
             </div>
 
             <ul class="nav-menu">
@@ -33,7 +34,7 @@
                 <li class="nav-item"> <a href="#Habilidades" class="nav-link">Habilidades</a> </li>
                 <li class="nav-item"> <a href="#Projetos" class="nav-link">Projetos</a> </li>
                 <li class="nav-item"> <a href="#Contato" class="nav-link">Contato</a> </li>
-                <li class="nav-item logotipo" ><a href="#Principal">H</a> </li>
+                <li class="nav-item logotipo" ><a href="#Principal" class="nav-link">H</a> </li>
             </ul>
             <div class="hamburguer">
                 <span class="bar"></span>
@@ -46,88 +47,90 @@
     
     <main>
 
-        <section class="main-section">
-            <div class="circles"></div>
-                <h1>
+        <section class="main-section" id="Principal">
+            <div></div>
+                <div class="circles"></div>
+                <h1 class="tittle-break">
                     <span>Olá,</span>
-                    <span>sou <strong class="texto-vermelho">Henrique </strong></span>
+                    <span>sou <strong class="red-text">Henrique </strong></span>
                     <span>desenvolvedor web</span>
-                    <span><strong class="texto-vermelho">front-end!</strong></span>
+                    <span><strong class="red-text">front-end!</strong></span>
                 </h1>
                 
-                <img src="images/foto.png" alt="Foto de Henrique">
+                <img src="images/foto.png" alt="Foto de Henrique" class="photo-henrique">
                 
-                <div class="border"></div>
         </section>
 
-        <section class="info">
-            <h2 class="texto-vermelho">Sobre</h2>
-            <p>Minha paixão com a programação começou por conta dos games que eu jogava diariamente, assim comecei a <strong class="texto-vermelho">desenvolver jogos</strong> com a engine <strong class="texto-vermelho">Unity 5</strong><span class="texto-vermelho">.</span>
+        <section class="info" id="Sobre">
+            <h2>Sobre</h2>
+            <p>Minha paixão com a programação começou por conta dos games que eu jogava diariamente, assim comecei a <strong class="red-text">desenvolver jogos</strong> com a engine <strong class="red-text">Unity 5</strong><span class="red-text">.</span>
 
-            <p>Mas depois de um bom tempo eu decidi trocar de área já que não via muito sucesso, com isso tive a escolha de migrar para o <strong class="texto-vermelho">front-end</strong><span class="texto-vermelho">!</span></p>
+            <p>Mas depois de um bom tempo eu decidi trocar de área já que não via muito sucesso, com isso tive a escolha de migrar para o <strong class="red-text">front-end</strong><span class="red-text">!</span></p>
 
             <div class="pixel-arts">
                 <img src="images/mario_pulo.svg" alt="personagem mario pulando" class="pixel-art">
                 <img src="images/bloco_mario.svg" alt="bloco do mario" class="pixel-art">
             </div>
             
-            <div class="border border-info"></div>
         </section>
 
-        <section class="abilities">
-            <h2 class="texto-vermelho">Habilidades</h2>
-            <p>Nesse tempo descobri algumas das principais tecnologias do mercado, tais como CSS3, HTML5 e atualmente estou dedicando a linguagem de programação Javascript.</p>
+        <section class="abilities" id="Habilidades">
+            <h2>Habilidades</h2>
+            <p>Nesse tempo descobri algumas das principais tecnologias do mercado, tais como <strong class="red-text">CSS3</strong>, <strong class="red-text">HTML5</strong> e atualmente estou dedicando a linguagem de programação <strong class="red-text">Javascript</strong><span class="red-text">.</span></p>
 
-            <p>Também aprendi muito de design com Photoshop e algumas ferramentas de edição que serviram de grande importãncia para minha criatividade!</p>
+            <p>Também aprendi muito de design com Photoshop e algumas ferramentas de edição que serviram de grande importância para minha <strong class="red-text">criatividade</strong><span class="red-text">!</span></p>
 
-            <div class="tecnologies">
+            <div class="tecnologies"> 
                 <img src="images/css3.svg" alt="logo CSS3" class="logos">
                 <img src="images/javascript.svg" alt="logo Javascript" class="logos">
-                <img src="images/html5.svg" alt="logo HTML5" class="logos">
+                <img src="images/html5.svg" alt="logo HTML5" class="logos"> 
             </div>
 
-            <div class="border border-habilities"></div>
         </section>
 
-        <section class="principal-projects">
-            <h2 class="texto-vermelho">Projetos principais </h2>
+        <section class="principal-projects" id="Projetos">
+            <h2>Projetos principais</h2>
             <p>Alguns projetos que eu criei!</p>
 
             <div>
                 <div class="projects">
-                    <div class="div-projects">
-                        <img src="images/projeto-landing-page.png" alt="projeto clipboard landing page" class="image-project">
-                        <h2>Projeto Clipboard Landing Page</h2>
+                    <img src="images/projeto-landing-page.png" alt="projeto clipboard landing page" class="image-project">
+                    <div>
+                        <span class="span-project span-css3">
+                            <img src="images/css3.svg" alt="logo CSS3" class="logo-project">
+                        </span>
+                        <span class="span-project span-js">
+                            <img src="images/javascript.svg" alt="logo Javascript" class="logo-project">
+                        </span>
+                        <span class="span-project span-html5">
+                            <img src="images/html5.svg" alt="logo HTML5" class="logo-project">
+                        </span>
                     </div>
-                    <div class="div-logos">
-                        <span class="span-project"><img src="images/css3.svg" alt="logo CSS3" class="logo-project"></span>
-                        <span class="span-project"><img src="images/javascript.svg" alt="logo Javascript" class="logo-project"></span>
-                        <span class="span-project"><img src="images/html5.svg" alt="logo HTML5" class="logo-project"></span>
-                    </div>
+                    
                 </div>
                 <div class="selection-balls">
                     <span class="ball"></span>
                     <span class="ball"></span>
                     <span class="ball"></span>
                 </div>
-            </div>
         </section>
 
     </main>
 
-    <footer class="main-footer">
+    <footer class="main-footer" id="Contato">
 
-        <div>
+        <div class="contact">
             <h2>Gostaria de falar comigo? </h2>
-            <h3><a href="">Clique aqui!</a></h3>
+            <button><a href="">Clique aqui!</a></button>
         </div>
 
-        <h3><a href="#">Vejá meu currículo!</a></h3>
+        <button class="download"><a href="images/Currículo Henrique.pdf" download>Veja meu currículo!</a></button>
 
-        <p>Copyright &copy; 2022 Henrique de Albuquerque Mascarin</p>
+        <p class="copyright">Copyright &copy; 2022 Henrique de Albuquerque Mascarin</p>
 
     </footer>
-
+    <script src="/js/smooth-scroll.js"></script>
     <script src="/js/navmenu.js"></script>
+    <script src="/js/parallax.js"></script>
 </body>
 </html>
