@@ -8,9 +8,7 @@ window.addEventListener('deviceorientation',function(e){
     document.getElementsByClassName('ztxt')[0].innerText = "Z-Axis = " + z;
     
         //Parallax Effect
-    document.getElementsByClassName('circles')[0].style.transform = `translateX(-${x}%)`;
-    document.getElementsByClassName('circles')[0].style.transform = `translateX(+${x}%)`;
-    document.getElementsByClassName('photo-henrique')[0].style.transform = `translateX(-${x}%)`;
-    document.getElementsByClassName('photo-henrique')[0].style.transform = `translateX(+${x}%)`;
+    document.getElementsByClassName('circles')[0].style.transform = `translateX(${y}%)`;
+    document.getElementsByClassName('photo-henrique')[0].style.transform = `translateX(${y}%)`;
     
 });
