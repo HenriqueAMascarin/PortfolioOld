@@ -4,6 +4,6 @@ window.addEventListener('deviceorientation',function(e){
     const z = Math.round(e.alpha);
 
     //Parallax Effect
-    document.getElementsByClassName('circles')[0].style.transform = `translateY(-${x}%)`;
-    document.getElementsByClassName('photo-henrique')[0].style.transform = `translateY(-${x}%)`;
+    document.getElementsByClassName('circles')[0].style.transform = `translate(-${x}%)`;
+    document.getElementsByClassName('photo-henrique')[0].style.transform = `translate(-${x}%)`;
 });
