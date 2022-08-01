@@ -13,7 +13,7 @@ h1,h2,h3{
     margin: 0;
     text-shadow: 0px 0px 15px #000000;
     font-size: 35px;
-    padding: 0 10px;
+    padding: 0 14px;
     font-weight: bold;
     color: #d53453;
 }
@@ -26,11 +26,13 @@ span{
 
 p{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    padding: 0 10px;
+    font-size: 1.5em;
+    padding: 0 20px;
     text-shadow: 0px 0px 15px #000000;
     font-weight: normal;
     color: #ffffff;
+    line-height: 1.4;
+    letter-spacing: .8px;
 }
 
 ul{
@@ -172,7 +174,7 @@ a{
 }
 
 .main-section{
-    background-image: linear-gradient(to top,rgb(38, 38, 38) 4%, rgb(33, 33, 33) 4%);
+    background-image: linear-gradient(to top,rgb(38, 38, 38) 3%, rgb(33, 33, 33) 3%);
 }
 .main-section::after{
     content: "";
@@ -203,55 +205,51 @@ a{
 
 @keyframes foto{
     0%, 100%{
-        filter: drop-shadow(4px 0px 0px rgb(213, 52, 83))  
-            drop-shadow(-4px 0px 0px rgb(255, 255, 255)) 
-            drop-shadow(0px 0px 5px rgba(213, 52, 83, 0.2))
-            drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.2)); 
+        filter: drop-shadow(4px 0px 2px rgb(213, 52, 83))  
+            drop-shadow(-4px 0px 2px rgb(255, 255, 255)); 
     }
     45%, 65%{
-        filter: drop-shadow(4px 0px 0px rgb(255, 255, 255)) 
-            drop-shadow(-4px 0px 0px rgb(213, 52, 83))
-            drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.2)) 
-            drop-shadow(0px 0px 5px rgba(213, 52, 83, 0.2)); 
+        filter: drop-shadow(4px 0px 2px rgb(255, 255, 255)) 
+            drop-shadow(-4px 0px 2px rgb(213, 52, 83)); 
     }
 
 }
 .photo-henrique{
     filter: drop-shadow(4px 0px 0px rgb(213, 52, 83))  
             drop-shadow(-4px 0px 0px rgb(255, 255, 255)); 
-    width: clamp(16em, 80vw, 25em);
+    width: clamp(13em, 80vw, 25em);
     height: auto;
     animation: foto 5s infinite ease-in-out;
     margin-top: 40px;
 }
 
 .pixel-arts{
-    width: 256px;
+    width: auto;
     height: 403px;
     display: inline-block;
-    
+    margin: 40px 0;
+    z-index: 1;
+    position: relative;
 }
 .pixel-art{ /* 16 x 31 */
     filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 1))
             drop-shadow(0px 0px 6px rgba(213, 52, 83, 1));
-    position: relative;
-    z-index: 0;
 }
 .pixel-art:nth-child(1){
-    transform: translate(15px,170px);
-    width: 112px;
-    height: 217px;
+    transform: translate(0px, 170px);
+    width: clamp(112px, 40vw, 144px);
+    height: clamp(217px, 40vw, 249px);
 }
 
 
 .pixel-art:nth-child(2){
-    transform: translate(10px,-30px);
-    width: 96px;
-    height: 186px;
+    transform: translate(10px, -70px);
+    width: clamp(96px, 20vw, 112px);
+    height: clamp(186px, 20vw, 202px);
 }
 
 .info{
-    background-image: linear-gradient(to top,rgb(48, 48, 48) 4%, rgb(38, 38, 38) 4%);
+    background-image: linear-gradient(to top,rgb(48, 48, 48) 3%, rgb(38, 38, 38) 3%);
     padding-top: 130px;
 }
 .info::after{
@@ -267,8 +265,27 @@ a{
 }
 
 .abilities{
-    background-image: linear-gradient(to top,rgb(58, 58, 58) 4%,rgb(48, 48, 48) 4%);
+    background-image: linear-gradient(to top,rgb(58, 58, 58) 3%,rgb(48, 48, 48) 3%);
     padding-top: 120px;
+}
+.tecnologies{
+    margin: 20px 0;
+    height: auto;
+    filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 1));
+}   
+.logos{
+    width: clamp(80px, 30vw, 200px);
+    filter: drop-shadow(0px 0px 5px rgb(213, 52, 83)); 
+    z-index: 1;
+    position: relative;
+}
+.logos:nth-child(1){
+    transform: translateX(60px);
+    padding-bottom: 60px;
+}
+.logos:nth-child(3){
+    transform: translateX(-60px);
+    padding-bottom: 45px;
 }
 .abilities::after{
     content: "";
@@ -281,35 +298,7 @@ a{
     display: block;
     box-shadow: 0px 10px 10px -0px rgba(0, 0, 0, 1);
 }
-.tecnologies{
-    width: 200px;
-    height: 200px;
-    filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 1))
-            drop-shadow(0px 0px 6px rgba(213, 52, 83, 1));
-    display: inline-block;
-    margin-top: 50px;
-}
-.logos{
-    filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
-}
-.logos:nth-child(1){
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 110px;
-}
-.logos:nth-child(2){
-    position: absolute;
-    left: 50px;
-    top: 70px;
-    width: 110px
-}
-.logos:nth-child(3){
-    position: absolute;
-    left: 80px;
-    top: 22px;
-    width: 110px;
-}
+
 
 .principal-projects{
     background-color: rgb(58, 58, 58);
@@ -373,7 +362,7 @@ a{
     background-color: rgb(31, 31, 31);
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(to top,rgb(31, 31, 31) 93%,rgb(58, 58, 58) 93%);
+    background-image: linear-gradient(to top,rgb(31, 31, 31) 94%,rgb(58, 58, 58) 94%);
 }
 .main-footer::before{
     content: "";
