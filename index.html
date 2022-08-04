@@ -50,11 +50,11 @@
         <section class="main-section" id="Principal">
                 
                 <div class="circles"></div>
-                <h1 class="tittle-break">
-                    <span>Olá,</span>
-                    <span>sou <strong class="red-text">Henrique </strong></span>
-                    <span>desenvolvedor web</span>
-                    <span><strong class="red-text">front-end!</strong></span>
+                <h1 class="whitespace">
+                    Olá,
+                    sou <strong class="red-text">Henrique</strong>
+                    desenvolvedor web
+                    <strong class="red-text">front-end!</strong>
                 </h1>
                 
                 <img src="images/foto.png" alt="Foto de Henrique" class="photo-henrique">
@@ -91,27 +91,27 @@
             <h2>Projetos principais</h2>
             <p>Alguns projetos que eu criei!</p>
 
-            <div>
-                <div class="projects">
-                    <img src="images/projeto-landing-page.png" alt="projeto clipboard landing page" class="image-project">
-                    <div>
-                        <span class="span-project span-css3">
-                            <img src="images/css3.svg" alt="logo CSS3" class="logo-project">
-                        </span>
-                        <span class="span-project span-js">
-                            <img src="images/javascript.svg" alt="logo Javascript" class="logo-project">
-                        </span>
-                        <span class="span-project span-html5">
-                            <img src="images/html5.svg" alt="logo HTML5" class="logo-project">
-                        </span>
+            <div class="projects">
+                    <div class="project-card">
+                        <div class="project-front"><img src="images/projeto-landing-page.png" alt="projeto clipboard landing page"></div>
+                        <div class="project-back">
+                            <img src="images/projeto-landing-costas.png" alt="projeto clipboard landing page">
+                            <a href="https://clipboard-landing-page-works.vercel.app" target="_blank" class="white-space">
+                                Projeto
+                                Clipboard
+                                Landing
+                                Page
+                            </a>
+                        </div>
                     </div>
-                    
-                </div>
-                <div class="selection-balls">
-                    <span class="ball"></span>
-                    <span class="ball"></span>
-                    <span class="ball"></span>
-                </div>
+            </div>
+
+            <div class="selection-balls">
+                <span class="ball first-ball"></span>
+                <span class="ball second-ball"></span>
+                <span class="ball third-ball"></span>
+            </div>
+            
         </section>
 
     </main>
@@ -130,5 +130,6 @@
     </footer>
     <script src="/js/smooth-scroll.js"></script>
     <script src="/js/navmenu.js"></script>
+    <script src="/js/selection-project.js"></script> 
 </body>
 </html>

@@ -5,9 +5,6 @@ html{
     text-align: center;
 }
 
-.tittle-break span{
-    display: block;
-}
 
 h1,h2,h3{
     margin: 0;
@@ -19,9 +16,6 @@ h1,h2,h3{
 }
 span{
     color: #ffffff;
-}
-.xtxt {
-    display: block;
 }
 
 p{
@@ -45,6 +39,11 @@ a{
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
+    
+}
+
+.whitespace{
+    white-space: pre-line;
 }
 
 ::-webkit-scrollbar{
@@ -176,6 +175,9 @@ a{
 .main-section{
     background-image: linear-gradient(to top,rgb(38, 38, 38) 3%, rgb(33, 33, 33) 3%);
 }
+.main-section h1{
+    color: #ffffff;
+}
 .main-section::after{
     content: "";
     height: 40px;
@@ -304,48 +306,77 @@ a{
     background-color: rgb(58, 58, 58);
 }
 .principal-projects h2{
-    padding-top: 70px;
+    padding-top: 100px;
 }
 
 .projects{
-    display: block;
+    display: inline-flex;
     margin: 30px auto 0;
+    width: auto;
+    height: clamp(15em, 70vw, 25em);
+    border-radius: 100%;
     position: relative;
-    top: 0;
-    left: 0;
+    transition: all 0.2s;
+    user-select: none;
+    align-items: center;
+    justify-content: center;
 }
+.project-card{
+    position: absolute;
+    width: clamp(15em, 70vw, 25em);
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    display: block;
+    cursor: pointer;
+} 
 
-.image-project{
+.project-card.active{
+    transform: rotateY(180deg);
+}
+.project-front{
+    position: absolute;
+    width: clamp(15em, 70vw, 25em);
+    height: 100%;
+    backface-visibility: hidden;
+}
+.project-back{
+    position: absolute;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    width: clamp(15em, 70vw, 25em);
+}
+.projects img{
     width: clamp(15em, 70vw, 25em);
     filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 1))
             drop-shadow(0px 0px 6px rgba(213, 52, 83, 1));
 }
 
-.span-project{
-    background-color: #d53453;
+.projects a{
+    color: #d53453;
+    display: block;
+    position: absolute;
     border-radius: 100%;
-    width: 50px;
-    height: 50px;
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    flex-direction: row;
-    filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 1))
-            drop-shadow(0px 0px 6px rgba(213, 52, 83, 1));
-}
-
-.logo-project{
-    width: 28px;
-    height: auto;
-    filter: drop-shadow(0px 0px 1px rgba(255, 255, 255,1));
+    text-shadow: 0px 0px 15px #d53453, 
+                -1px -1px 0px #ffffff,
+                1px -1px 0px #ffffff,
+                -1px 1px 0px #ffffff,
+                1px 1px 0 #ffffff;
+    top: 50%;
+    left: 50%;
+    padding: 10px 20px;
+    transform: translate(-50%,-50%);
+    opacity: 1;
+    font-size: clamp(1.6em, 8vw,3em);
 }
 
 .selection-balls{
-    margin: 10px 0 30px;
-    width: 110px;
+    margin: 40px 0 0px;
+    padding-bottom: 20px;
+    width: auto;
     height: 110px;
-    display: inline-block;
-
+    display: block;
 }
 
 .ball{
@@ -356,6 +387,12 @@ a{
     border-radius: 100%;
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 1),
                 0px 0px 6px rgba(213, 52, 83, 1);
+}
+.first-ball{
+    background-color: #d53453;
+}
+.second-ball{
+    margin: 0 10px;
 }
 
 .main-footer{
