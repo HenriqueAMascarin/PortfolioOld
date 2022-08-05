@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="144" height="144" viewBox="0 0 144 144">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d53453;
+      }
+
+      .cls-2 {
+        font-size: 138.889px;
+        fill: #fff;
+        font-family: Farro;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <circle id="Elipse_5" data-name="Elipse 5" class="cls-1" cx="72" cy="72.375" r="71.5"/>
+  <text id="H" class="cls-2" x="26.653" y="125.528">H</text>
+</svg>
