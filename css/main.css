@@ -205,7 +205,7 @@ a{
     padding-top: 175px;
 }
 
-@keyframes foto{
+@keyframes photo{
     0%, 100%{
         filter: drop-shadow(4px 0px 2px rgb(213, 52, 83))  
             drop-shadow(-4px 0px 2px rgb(255, 255, 255)); 
@@ -221,7 +221,7 @@ a{
             drop-shadow(-4px 0px 0px rgb(255, 255, 255)); 
     width: clamp(13em, 80vw, 25em);
     height: auto;
-    animation: foto 5s infinite ease-in-out;
+    animation: photo 5s infinite ease-in-out;
     margin-top: 40px;
 }
 
@@ -301,7 +301,6 @@ a{
     box-shadow: 0px 10px 10px -0px rgba(0, 0, 0, 1);
 }
 
-
 .principal-projects{
     background-color: rgb(58, 58, 58);
 }
@@ -326,11 +325,13 @@ a{
     width: clamp(15em, 70vw, 25em);
     height: 100%;
     transform-style: preserve-3d;
-    transition: all 0.5s ease;
     display: block;
     cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
 } 
-
 .project-card.active{
     transform: rotateY(180deg);
 }
@@ -339,6 +340,9 @@ a{
     width: clamp(15em, 70vw, 25em);
     height: 100%;
     backface-visibility: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 .project-back{
     position: absolute;
@@ -346,6 +350,9 @@ a{
     backface-visibility: hidden;
     transform: rotateY(180deg);
     width: clamp(15em, 70vw, 25em);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 .projects img{
     width: clamp(15em, 70vw, 25em);
@@ -353,9 +360,16 @@ a{
             drop-shadow(0px 0px 6px rgba(213, 52, 83, 1));
 }
 
-.projects a{
+@keyframes title-back{
+    0%, 100%{
+        transform: scale(1);
+    }
+    45%, 55%{
+        transform: scale(1.1);
+    }
+}
+.title-project{
     color: #d53453;
-    display: block;
     position: absolute;
     border-radius: 100%;
     text-shadow: 0px 0px 15px #d53453, 
@@ -363,12 +377,12 @@ a{
                 1px -1px 0px #ffffff,
                 -1px 1px 0px #ffffff,
                 1px 1px 0 #ffffff;
-    top: 50%;
-    left: 50%;
-    padding: 10px 20px;
-    transform: translate(-50%,-50%);
-    opacity: 1;
     font-size: clamp(1.6em, 8vw,3em);
+    white-space: pre-line;
+
+}
+.title-project.active{
+    animation: title-back 3s infinite ease-in-out;
 }
 
 .selection-balls{
@@ -378,7 +392,6 @@ a{
     height: 110px;
     display: block;
 }
-
 .ball{
     width: 30px;
     height: 30px;
