@@ -310,31 +310,37 @@ a{
 
 .projects{
     display: inline-flex;
-    margin: 30px auto 0;
-    width: auto;
+    margin: 30px 0 0;
+    position: relative;
+    overflow: hidden;
+    width: clamp(15em, 70vw, 25em);
     height: clamp(15em, 70vw, 25em);
     border-radius: 100%;
-    position: relative;
     transition: all 0.2s;
     user-select: none;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
+    flex-flow: row nowrap;
+    gap: 60px;
 }
 .project-card{
-    position: absolute;
+    position: relative;
     width: clamp(15em, 70vw, 25em);
     height: 100%;
     transform-style: preserve-3d;
-    display: block;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     transition: all 0.5s ease;
+    flex-grow: 0;
+    flex-shrink: 0;
 } 
-.project-card.active{
+
+.project.active, .project-2.active, .project-3.active{
     transform: rotateY(180deg);
 }
+
 .project-front{
     position: absolute;
     width: clamp(15em, 70vw, 25em);
@@ -379,14 +385,13 @@ a{
                 1px 1px 0 #ffffff;
     font-size: clamp(1.6em, 8vw,3em);
     white-space: pre-line;
-
 }
-.title-project.active{
+.title-act.active, .title-act2.active, .title-act3.active{
     animation: title-back 3s infinite ease-in-out;
 }
 
-.selection-balls{
-    margin: 40px 0 0px;
+.selection-buttons{
+    margin: 20px 0 0;
     padding-bottom: 20px;
     width: auto;
     height: 110px;
@@ -400,12 +405,18 @@ a{
     border-radius: 100%;
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 1),
                 0px 0px 6px rgba(213, 52, 83, 1);
+    cursor: pointer;
+    transition: all 0.5s ease;
 }
-.first-ball{
+
+.ball:nth-child(2){
+    margin: 0 20px;
+}
+
+
+.button.active, .button2.active, .button3.active{
     background-color: #d53453;
-}
-.second-ball{
-    margin: 0 10px;
+    transform: scale(1.1);
 }
 
 .main-footer{
