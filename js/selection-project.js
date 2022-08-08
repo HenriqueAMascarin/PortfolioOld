@@ -28,6 +28,7 @@ project3.addEventListener("click", () => {
 })
 
 //PROJECT SELECT BUTTONS
+button.classList.add("active");
 button.addEventListener("click", () => {
     button2.classList.remove("active");
     button3.classList.remove("active");
