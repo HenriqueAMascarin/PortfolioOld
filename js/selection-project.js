@@ -6,7 +6,6 @@ const titleProject = document.querySelector(".title-act")
 const titleProject2 = document.querySelector(".title-act2")
 const titleProject3 = document.querySelector(".title-act3")
 
-const buttons = document.querySelector(".selection-buttons")
 const button = document.querySelector(".button");
 const button2 = document.querySelector(".button2");
 const button3 = document.querySelector(".button3");
