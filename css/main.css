@@ -93,7 +93,7 @@ a{
     align-items: center;
     position: fixed;
     left: -100%;
-    top: 100px;
+    top: 70px;
     gap: 0;
     flex-direction: column;
     background-color: #1f1f1f;
@@ -179,7 +179,7 @@ a{
 }
 .main-section h1{
     color: #ffffff;
-    padding-top: 175px;
+    padding-top: 60px;
     z-index: 1;
 }
 .main-section::after{
@@ -200,7 +200,7 @@ a{
     position: absolute;
     width: 100%;
     background-repeat: no-repeat;
-    background-size: clamp(26em, 100vw, 30em) 46em;
+    background-size: clamp(26em, 100vw, 30em) 56em;
     background-position: bottom center;
     z-index: 1;
 }
@@ -442,7 +442,7 @@ a{
     display: flex;
     flex-flow: column nowrap;
     padding: 30px;
-    width: 70%;
+    width: 60%;
     margin: auto;
     background-color: rgba(213, 52, 83, 1);
     border-radius: 30px;
@@ -456,10 +456,9 @@ a{
     color: #ffffff;
     text-shadow: none;
 }
-.contact button{
+.contact a{
     background-color: #d53453;
-    width: clamp(8em, 50vw, 12em);
-    height: 70px;
+    padding: 20px;
     margin-top: 30px;
     border-radius: 30px;
     border: 2px solid #ffffff;
@@ -467,19 +466,24 @@ a{
     font-size: 1.4em;
     transition: .3s all ease-in-out;
 }
-.contact button:hover{
+.contact a:hover{
     transform: scale(2px);
     box-shadow: 6px 6px 1px #ffffff;
 }
 
+.downloadCopy{
+    display: inline-flex;
+    align-items: center;
+    flex-flow: column wrap;
+    justify-content: center;
+}
 .download{
     background-color: #d53453;
-    width: clamp(10em, 40vw, 40em);
-    margin: auto;
-    height: 70px;
+    width: 40%;
+    padding: 20px;
     border: transparent;
     border-radius: 30px;
-    display: block;
+    display: inline-block;
     font-size: 1.4em;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 1),
                 0px 0px 10px rgba(0, 0, 0, 1);
@@ -490,7 +494,7 @@ a{
                 0px 0px 10px rgba(213, 52, 83, 1);
 }
 
-.copyright {
+.copyright{
     display: inline-block;
     margin: 40px 0 15px;
     padding: 0 30px;
@@ -503,6 +507,7 @@ a{
     .main-section{
         background-image: linear-gradient(to top,rgb(38, 38, 38) 6%, rgb(33, 33, 33) 6%);
     }
+    
     .info{
         background-image: linear-gradient(to top,rgb(48, 48, 48) 6%, rgb(38, 38, 38) 6%);
         padding-top: 130px;
@@ -521,11 +526,16 @@ a{
     .hamburguer{
         display: none;
     }
+
+    .navbar{
+        padding-top: 10px;
+        align-items: baseline;
+    }
     .icons{
         font-size: 50px;
-        align-items: center;
         justify-content: center;
         padding-right: 30px;
+        
     }
     .nav-menu{
         display: flex;
@@ -539,7 +549,7 @@ a{
     }
     
     .nav-menu li:not(.logotipo){
-        font-size: 3em;
+        font-size: clamp(2em, 3vw, 3em);
     }
     .logotipo{
         padding: 0 60px;
@@ -548,7 +558,6 @@ a{
     .flex{
         display: flex;
         flex-flow: row nowrap;
-        padding: 100px 100px 0;
         justify-content: center;
         width: auto;
         height: auto;
@@ -560,9 +569,52 @@ a{
         margin-right: 30px;
     }
 
+    .main-section .flex{
+        padding: 130px 100px 0;
+    }
     .circles{
         background-image: url(/images/bolinhas\ pc.svg);
         height: 840px; 
         background-size: clamp(40em, 100vw, 70em) 55em;
+    }
+
+    .flex article{
+        width: 50%;
+        font-size: 1.2em;
+        margin-right: 30px;
+    }
+    .flex h2{
+        font-size: 3em;
+    }
+    .flex p{
+        padding: 0 100px;
+    }
+    .pixel-arts{
+        width: 608px;
+    }
+
+    .contact{
+        top: -150px;
+    }
+    .flex-contact{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+        font-size: 1.5em;
+    }
+    .flex-contact h2{
+        margin: 0;
+        padding: 0;
+        width: 50%;
+    }
+    .flex-contact a{
+        margin: 0;
+        width: 20%;
+    }
+    .download{
+        font-size: 2em;
+        width: 70%;
     }
 }

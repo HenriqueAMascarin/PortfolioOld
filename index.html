@@ -53,7 +53,7 @@
                 <h1 class="whitespace">
                     Olá,
                     sou <strong class="red-text">Henrique</strong>
-                    desenvolvedor web
+                    desenvolvedor
                     <strong class="red-text">front-end</strong><span class="red-text">!</span>
                 </h1>
                     
@@ -63,36 +63,45 @@
         </section>
 
         <section class="info" id="Sobre">
-            
-            <h2>Sobre</h2>
-            <p>Minha paixão com a programação começou por conta dos games que eu jogava diariamente, assim comecei a <strong class="red-text">desenvolver jogos</strong> com a engine <strong class="red-text">Unity 5</strong><span class="red-text">.</span>
-
-            <p>Mas depois de um bom tempo eu decidi trocar de área, com isso tive a escolha de migrar para o <strong class="red-text">front-end</strong><span class="red-text">!</span></p>
-
-            <div class="pixel-arts">
-                <img src="images/mario_pulo.svg" alt="personagem mario pulando" class="pixel-art">
-                <img src="images/bloco_mario.svg" alt="bloco do mario" class="pixel-art">
+            <div class="flex">
+                <article>
+                    <h2>Sobre</h2>
+                    <p>Minha paixão com a programação começou por conta dos games que eu jogava diariamente, assim comecei a <strong class="red-text">desenvolver jogos</strong> com a engine <strong class="red-text">Unity 5</strong><span class="red-text">.</span>
+    
+                    <p>Mas depois de um bom tempo eu decidi trocar de área, com isso tive a escolha de migrar para o <strong class="red-text">front-end</strong><span class="red-text">!</span></p>
+                </article>
+                
+                <div class="pixel-arts">
+                    <img src="images/mario_pulo.svg" alt="personagem mario pulando" class="pixel-art">
+                    <img src="images/bloco_mario.svg" alt="bloco do mario" class="pixel-art">
+                </div>
             </div>
-            
         </section>
 
         <section class="abilities" id="Habilidades">
-            <h2>Habilidades</h2>
-            <p>Nesse tempo descobri algumas das principais tecnologias do mercado, tais como <strong class="red-text">CSS3</strong>, <strong class="red-text">HTML5</strong> e  <strong class="red-text">Javascript</strong>. Também continuo a estudar e aprender coisas novas.</p>
+            <div class="flex">
+                <article>
+                    <h2>Habilidades</h2>
+                    <p>Nesse tempo descobri algumas das principais tecnologias do mercado, tais como <strong class="red-text">CSS3</strong>, <strong class="red-text">HTML5</strong> e  <strong class="red-text">Javascript</strong>. Também continuo a estudar e aprender coisas novas.</p>
+    
+                    <p>Também aprendi bastante sobre design com Photoshop e algumas ferramentas de edição que serviram de grande importância para minha <strong class="red-text">criatividade</strong><span class="red-text">!</span></p>
+                </article>
 
-            <p>Também aprendi bastante sobre design com Photoshop e algumas ferramentas de edição que serviram de grande importância para minha <strong class="red-text">criatividade</strong><span class="red-text">!</span></p>
+                <div class="tecnologies"> 
+                    <img src="images/css3.svg" alt="logo CSS3" class="logos">
+                    <img src="images/javascript.svg" alt="logo Javascript" class="logos">
+                    <img src="images/html5.svg" alt="logo HTML5" class="logos"> 
+                </div>
 
-            <div class="tecnologies"> 
-                <img src="images/css3.svg" alt="logo CSS3" class="logos">
-                <img src="images/javascript.svg" alt="logo Javascript" class="logos">
-                <img src="images/html5.svg" alt="logo HTML5" class="logos"> 
             </div>
 
         </section>
 
         <section class="principal-projects" id="Projetos">
+
             <h2>Projetos principais</h2>
             <p>Alguns projetos que eu criei!</p>
+
             <div class="projects">
                     <div class="project-card project">
                         <div class="project-front"><img src="images/projeto-landing-page.png" alt="projeto clipboard landing page"></div>
@@ -105,7 +114,7 @@
                             </a>
                         </div>
                     </div>
-
+                    
                     <div class="project-card project-2">
                         <div class="project-front"><img src="images/projeto-landing-page.png" alt="projeto clipboard landing page"></div>
                         <div class="project-back">
@@ -135,25 +144,25 @@
                 <span class="ball button2"></span>
                 <span class="ball button3"></span>
             </div>
-            
         </section>
-
     </main>
 
     <footer class="main-footer" id="Contato">
-
-        <div class="contact">
-            <h2>Gostaria de falar comigo? </h2>
-            <button><a href="">Clique aqui!</a></button>
+        <div class="contact flex-contact">
+            <h2>Gostaria de falar comigo?</h2>
+            <a href="">Clique aqui!</a>
         </div>
 
-        <button class="download"><a href="images/Currículo Henrique.pdf" download>Veja meu currículo!</a></button>
+        <div class="downloadCopy">
+            <a href="images/CurrículoHenrique.pdf" class="download" download>Veja meu currículo!</a>
 
-        <p class="copyright">Copyright &copy; 2022 Henrique de Albuquerque Mascarin</p>
-
+            <p class="copyright">Copyright &copy; 2022 Henrique de Albuquerque Mascarin</p>
+        </div>
     </footer>
+
     <script src="/js/smooth-scroll.js"></script>
     <script src="/js/navmenu.js"></script>
     <script src="/js/selection-project.js"></script> 
+
 </body>
 </html>
