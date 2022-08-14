@@ -16,15 +16,15 @@ project.addEventListener("click", () => {
     titleProject.classList.toggle("active");
 })
 
-project2.addEventListener("click", () => {
-    project2.classList.toggle("active");
-    titleProject2.classList.toggle("active");
-})
+// project2.addEventListener("click", () => {
+//     project2.classList.toggle("active");
+//     titleProject2.classList.toggle("active");
+// })
 
-project3.addEventListener("click", () => {
-    project3.classList.toggle("active");
-    titleProject3.classList.toggle("active");
-})
+// project3.addEventListener("click", () => {
+//     project3.classList.toggle("active");
+//     titleProject3.classList.toggle("active");
+// })
 
 //PROJECT SELECT BUTTONS
 button.classList.add("active");
@@ -39,12 +39,12 @@ button2.addEventListener("click", () => {
     button.classList.remove("active");
     button3.classList.remove("active");
     button2.classList.add("active");
-    project.style.marginLeft = "-115%";
+    project.style.marginLeft = "-125%";
 })
 
 button3.addEventListener("click", () => {
     button.classList.remove("active");
     button2.classList.remove("active");
     button3.classList.add("active");
-    project.style.marginLeft = "-230%";
+    project.style.marginLeft = "-245%";
 })
