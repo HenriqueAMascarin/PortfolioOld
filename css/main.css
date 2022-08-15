@@ -42,8 +42,19 @@ a{
     
 }
 
-.whitespace{
-    white-space: pre-line;
+.info h2{
+    font-size: clamp(60px, 15vw, 70px);
+}
+
+.abilities h2{
+    font-size: clamp(35px, 15vw, 70px);
+}
+
+.principal-projects h2{
+    font-size: clamp(50px, 15vw, 70px);
+}
+.principal-projects p{
+    font-size: clamp(1.5em, 15vw, 2em);
 }
 
 ::-webkit-scrollbar{
@@ -64,7 +75,6 @@ a{
     opacity: 0;
     display: block;
 }
-
 .red-text{
     color: #d53453;
 }
@@ -80,7 +90,7 @@ a{
     justify-content: space-between;
     align-items: center;
     min-height: 70px;
-    background-color: #1f1f1f;
+    background-image: linear-gradient(-45deg,rgb(31, 31, 31) 45%, rgb(213, 52, 83) 45.3%);
     position: fixed;
     top: 0;
     left: 0;
@@ -152,18 +162,18 @@ a{
 }
 
 .icons{
-    font-size: 40px;
+    font-size: clamp(35px, 15vw, 40px);
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 30px;
-    margin: 0 70px 0 25px;
+    margin: 0 70px 0 15px;
 }
 .icons a{
     transition: .4s color cubic-bezier(.57,.21,.69,1.25);
 }
 .icons a:hover{
-    color: #d53453;
+    color: #1c1c1cc9;
 }
 
 .logotipo{
@@ -179,7 +189,10 @@ a{
 .main-section h1{
     color: #ffffff;
     padding-top: 60px;
+    position: relative;
     z-index: 1;
+    font-size: clamp(35px, 10vw, 50px);
+    white-space: pre-line;
 }
 .main-section::after{
     content: "";
@@ -195,13 +208,13 @@ a{
 
 .circles{
     background-image: url(../images/bolinhas.svg);
-    height: 740px;
+    height: 780px;
     position: absolute;
     width: 100%;
     background-repeat: no-repeat;
-    background-size: clamp(26em, 100vw, 30em) 56em;
+    background-size: clamp(26em, 100vw, 30em) 60em;
     background-position: bottom center;
-    z-index: 1;
+    z-index: 0;
 }
 
 @keyframes photo{
@@ -392,7 +405,7 @@ a{
 
 .selection-buttons{
     margin: 20px 0 0;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
     width: auto;
     height: 110px;
     display: block;
@@ -499,8 +512,22 @@ a{
     color: rgb(107, 106, 106);
     font-family: 'Farro', Arial, Helvetica, sans-serif;
     font-weight: bold;
+    font-size: 1em;
 }
-
+@media screen and (max-width:20em){
+    .circles{
+        background-image: url(../images/bolinhas.svg);
+        height: 780px;
+        position: absolute;
+        width: 100%;
+        background-size: 20em 62em;
+    }
+}
+@media screen and (min-width:30em){
+    .circles{
+        background-size: clamp(26em, 100vw, 35em) 50em;
+    }
+}
 @media screen and (min-width:62.5em){
     .main-section{
         background-image: linear-gradient(to top,rgb(38, 38, 38) 6%, rgb(33, 33, 33) 6%);
@@ -524,10 +551,14 @@ a{
     
     .navbar{
         align-items: baseline;
+        background: #1f1f1f;
     }
     
     .icons{
         font-size: 50px;
+    }
+    .icons a:hover{
+        color: #d53453;
     }
 
     .nav-menu{
