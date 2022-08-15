@@ -47,11 +47,11 @@ a{
 }
 
 .abilities h2{
-    font-size: clamp(35px, 15vw, 60px);
+    font-size: clamp(35px, 15vw, 50px);
 }
 
 .principal-projects h2{
-    font-size: clamp(50px, 15vw, 60px);
+    font-size: clamp(50px, 15vw, 50px);
 }
 .principal-projects p{
     font-size: clamp(1.5em, 15vw, 1.8em);
@@ -523,7 +523,11 @@ a{
         background-size: 20em 62em;
     }
 }
-
+@media screen and (min-width:30em){
+    .circles{
+        background-size: clamp(26em, 100vw, 35em) 50em;
+    }
+}
 @media screen and (min-width:62.5em){
     .main-section{
         background-image: linear-gradient(to top,rgb(38, 38, 38) 6%, rgb(33, 33, 33) 6%);
