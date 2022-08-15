@@ -42,20 +42,7 @@ a{
     
 }
 
-.info h2{
-    font-size: clamp(60px, 15vw, 70px);
-}
 
-.abilities h2{
-    font-size: clamp(35px, 15vw, 70px);
-}
-
-.principal-projects h2{
-    font-size: clamp(50px, 15vw, 70px);
-}
-.principal-projects p{
-    font-size: clamp(1.5em, 15vw, 2em);
-}
 
 ::-webkit-scrollbar{
     width: 20px;
