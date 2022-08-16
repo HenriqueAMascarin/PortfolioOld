@@ -16,6 +16,10 @@
     <link rel="stylesheet" href="icomoon/style.css">
     <link rel="stylesheet" href="css/main.css">
 
+    <script src="/js/smooth-scroll.js" defer></script>
+    <script src="/js/navmenu.js" defer></script>
+    <script src="/js/selection-project.js" defer></script> 
+
 </head>
 <body>
 
@@ -147,25 +151,48 @@
                 <span class="ball button2"></span>
                 <span class="ball button3"></span>
             </div>
+
+            
+            
+
+        </section>
+
+        <section class="contact-section">
+            <h2>Contato</h2>
+            <div class="contact-div">
+                <form action="#" method="POST" class="contact-form">
+                    <div>
+                        <input type="text" placeholder="Nome" name="name" class="text-contact" required>
+                        <label for="name"></label>
+                    </div>
+                    <div>
+                        <input type="email"placeholder="Email" name="email" class="text-contact" required>
+                        <label for="email"></label>
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Titulo" name="subject" class="text-contact" required>
+                        <label for="subject"></label>
+                    </div>
+                    
+                    <div>
+                        <textarea name="msg" name="message" placeholder="Mensagem" class="text-contact textarea" required></textarea>
+                        <label for="message"></label>
+                    </div>
+                    <input type="submit" value="envie a mensagem!" class="contact-button" name="button">
+                </form>
+            </div>
+            
         </section>
     </main>
 
     <footer class="main-footer" id="Contato">
         <div class="contact flex-contact">
-            <h2>Gostaria de falar comigo?</h2>
-            <a href="">Clique aqui!</a>
+            <h2>Gostaria de ver meu portfolio?</h2>
+            <a href="images/CurrículoHenrique.pdf" download>Clique aqui!</a>
         </div>
 
-        <div class="downloadCopy">
-            <a href="images/CurrículoHenrique.pdf" class="download" download>Veja meu currículo!</a>
-
-            <p class="copyright">Copyright &copy; 2022 Henrique de Albuquerque Mascarin</p>
-        </div>
+        <p class="copyright">Copyright &copy; 2022 Henrique de Albuquerque Mascarin</p>
     </footer>
-
-    <script src="/js/smooth-scroll.js"></script>
-    <script src="/js/navmenu.js"></script>
-    <script src="/js/selection-project.js"></script> 
 
 </body>
 </html>

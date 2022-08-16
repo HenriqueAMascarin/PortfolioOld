@@ -300,10 +300,21 @@ a{
 }
 
 .principal-projects{
-    background-color: rgb(58, 58, 58);
+    background-image: linear-gradient(to top,rgb(65, 65, 65) 3%, rgb(58, 58, 58) 3%);
 }
 .principal-projects h2{
     padding-top: 100px;
+}
+.principal-projects::after{
+    content: "";
+    height: 40px;
+    width: 100%;
+    z-index: 0;
+    background-color: rgb(58, 58, 58);
+    border-radius: 0px 0px 90% 90%;
+    position: relative;
+    display: block;
+    box-shadow: 0px 10px 10px -0px rgba(0, 0, 0, 1);
 }
 
 .projects{
@@ -390,9 +401,8 @@ a{
 
 .selection-buttons{
     margin: 20px 0 0;
-    padding-bottom: 50px;
     width: auto;
-    height: 110px;
+    height: 100px;
     display: block;
 }
 .ball{
@@ -416,11 +426,44 @@ a{
     transform: scale(1.1);
 }
 
+.contact-section{
+    background-color: rgb(65, 65, 65);
+    padding: 100px 0;
+}
+.contact-section h2{
+    margin-bottom: 20px;
+}
+
+.contact-div{
+    margin-bottom: 50px;
+    position: relative;
+    width: 100%;
+}
+.contact-form{
+    width: 100%;
+    display: block;
+}
+.text-contact{
+    background-color: #1f1f1f;
+    border: 0;
+    width: 50%;
+    height: 50px;
+    margin-bottom: 15px;
+}
+.textarea{
+    resize: none;
+    height: 100px;
+    width: 50%;
+}
+.contact-button{
+    width: 30%;
+}
+
 .main-footer{
     background-color: rgb(31, 31, 31);
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(to top,rgb(31, 31, 31) 94%,rgb(58, 58, 58) 94%);
+    background-image: linear-gradient(to top,rgb(31, 31, 31) 94%,rgb(65, 65, 65) 94%);
 }
 .main-footer::before{
     content: "";
@@ -449,7 +492,7 @@ a{
                 0px 0px 10px rgba(0, 0, 0, 1);
 }
 .contact h2{
-    font-size: 2em;
+    font-size: 1.5em;
 }
 .contact h2,a{
     color: #ffffff;
@@ -470,37 +513,17 @@ a{
     box-shadow: 6px 6px 1px #ffffff;
 }
 
-.downloadCopy{
-    display: inline-flex;
-    align-items: center;
-    flex-flow: column wrap;
-    justify-content: center;
-}
-.download{
-    background-color: #d53453;
-    width: 40%;
-    padding: 20px;
-    border: transparent;
-    border-radius: 30px;
-    display: inline-block;
-    font-size: 1.4em;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1),
-                0px 0px 10px rgba(0, 0, 0, 1);
-    transition: .3s all ease-in-out;
-}
-.download:hover{
-    box-shadow: 0px 0px 10px rgba(213, 52, 83, 1),
-                0px 0px 10px rgba(213, 52, 83, 1);
-}
-
 .copyright{
     display: inline-block;
-    margin: 40px 0 15px;
     padding: 0 30px;
     color: rgb(107, 106, 106);
     font-family: 'Farro', Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 1em;
+    transition: .3s all ease-in-out;
+}
+.copyright:hover{
+    color: rgb(226, 226, 226);
 }
 @media screen and (max-width:20em){
     .circles{
@@ -520,7 +543,6 @@ a{
     .main-section{
         background-image: linear-gradient(to top,rgb(38, 38, 38) 6%, rgb(33, 33, 33) 6%);
     }
-    
     .info{
         background-image: linear-gradient(to top,rgb(48, 48, 48) 6%, rgb(38, 38, 38) 6%);
         padding-top: 130px;
@@ -529,11 +551,15 @@ a{
         background-image: linear-gradient(to top,rgb(58, 58, 58) 6%,rgb(48, 48, 48) 6%);
         padding-top: 120px;
     }
-    .main-footer{
-        background-image: linear-gradient(to top,rgb(31, 31, 31) 90%,rgb(58, 58, 58) 90%);
+    .principal-projects{
+        background-image: linear-gradient(to top,rgb(65, 65, 65) 6%, rgb(58, 58, 58) 6%);
     }
+    .main-footer{
+        background-image: linear-gradient(to top,rgb(31, 31, 31) 80%,rgb(65, 65, 65) 80%);
+    }
+
     
-    .main-section::after, .info::after, .abilities::after, .main-footer::before{
+    .main-section::after, .info::after, .abilities::after, .main-footer::before, .principal-projects::after{
         height: 100px;
     }
     
@@ -630,9 +656,5 @@ a{
     .flex-contact a{
         margin: 0;
         width: 20%;
-    }
-    .download{
-        font-size: 2em;
-        width: 70%;
     }
 }
