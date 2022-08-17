@@ -9,10 +9,14 @@ html{
 h1,h2,h3{
     margin: 0;
     text-shadow: 0px 0px 15px #000000;
-    font-size: 45px;
+    font-size: 3em;
     padding: 0 14px;
     font-weight: bold;
     color: #d53453;
+}
+
+section h2, section h3{
+    padding-top: 80px;
 }
 span{
     color: #ffffff;
@@ -99,7 +103,7 @@ a{
 .nav-item{
     margin: 14px 0;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 1.5em;
 }
 
 .nav-link{
@@ -162,7 +166,7 @@ a{
 }
 
 .logotipo{
-    font-size: 80px;
+    font-size: 5em;
     display: inline-block;
     font-weight: bold;
     margin: 0;
@@ -250,7 +254,6 @@ a{
 
 .info{
     background-image: linear-gradient(to top,rgb(48, 48, 48) 3%, rgb(38, 38, 38) 3%);
-    padding-top: 130px;
 }
 .info::after{
     content: "";
@@ -266,7 +269,6 @@ a{
 
 .abilities{
     background-image: linear-gradient(to top,rgb(58, 58, 58) 3%,rgb(48, 48, 48) 3%);
-    padding-top: 120px;
 }
 .tecnologies{
     margin: 45px 0 20px;
@@ -301,9 +303,6 @@ a{
 
 .principal-projects{
     background-image: linear-gradient(to top,rgb(65, 65, 65) 3%, rgb(58, 58, 58) 3%);
-}
-.principal-projects h2{
-    padding-top: 100px;
 }
 .principal-projects::after{
     content: "";
@@ -428,7 +427,7 @@ a{
 
 .contact-section{
     background-color: rgb(65, 65, 65);
-    padding: 100px 0;
+    padding-bottom: 60px;
 }
 .contact-section h2{
     margin-bottom: 20px;
@@ -439,24 +438,48 @@ a{
     position: relative;
     width: 100%;
 }
-.contact-form{
-    width: 100%;
-    display: block;
+.contact_form{
+    display: flex;
+    flex-flow: column nowrap;
 }
 .text-contact{
     background-color: #1f1f1f;
     border: 0;
-    width: 50%;
-    height: 50px;
+    width: 90%;
+    height: 3rem;
     margin-bottom: 15px;
+    border: 2px solid #1f1f1f;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.input_focus{
+    transition: .3s all ease-in-out;
+}
+.input_focus:focus{
+    border: 3px solid #d53453;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1),
+                0px 0px 10px rgba(0, 0, 0, 1);
+    outline: 0;
 }
 .textarea{
     resize: none;
-    height: 100px;
-    width: 50%;
+    height: 8rem;
+    width: 90%;
 }
 .contact-button{
-    width: 30%;
+    height: 4rem;
+    background-color: #1f1f1f;
+    border: 0;
+    width: 50%;
+    color: #d53453;
+    font-size: 1.8em;
+    padding: 0 20px;
+    font-weight: bold;
+    border-radius: 25px;
+    border: 2px solid #1f1f1f;
+    align-self: center;
 }
 
 .main-footer{
@@ -508,9 +531,10 @@ a{
     font-size: 1.4em;
     transition: .3s all ease-in-out;
 }
-.contact a:hover{
+.contact a:hover, .contact a:focus{
     transform: scale(2px);
     box-shadow: 6px 6px 1px #ffffff;
+    outline: 0;
 }
 
 .copyright{
@@ -569,7 +593,7 @@ a{
     }
     
     .icons{
-        font-size: 50px;
+        font-size: 3em;
     }
     .icons a:hover{
         color: #d53453;
@@ -608,7 +632,7 @@ a{
     }
     .flex h1{
         text-align: start;
-        font-size: 60px;
+        font-size: 4em;
         padding: 80px 0 0;
         margin-right: 30px;
     }
