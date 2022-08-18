@@ -431,6 +431,7 @@ a{
 }
 .contact-section h2{
     margin-bottom: 20px;
+    font-size: 4em;
 }
 
 .contact-div{
@@ -442,22 +443,26 @@ a{
     display: flex;
     flex-flow: column nowrap;
 }
+
 .text-contact{
     background-color: #1f1f1f;
     border: 0;
-    width: 90%;
+    width: 30rem;
     height: 3rem;
     margin-bottom: 15px;
-    border: 2px solid #1f1f1f;
     border-radius: 10px;
     color: rgb(255, 255, 255);
     font-size: 1.2em;
     font-weight: bold;
+    border-bottom: 3px solid #d53453;
+}
+.text-contact::placeholder{
+    padding: 10px 0 0 10px;
 }
 .input_focus{
     transition: .3s all ease-in-out;
 }
-.input_focus:focus{
+.input_focus:focus, .input_focus:hover{
     border: 3px solid #d53453;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 1),
                 0px 0px 10px rgba(0, 0, 0, 1);
@@ -468,18 +473,21 @@ a{
     height: 8rem;
     width: 90%;
 }
+
 .contact-button{
     height: 4rem;
     background-color: #1f1f1f;
     border: 0;
     width: 50%;
-    color: #d53453;
+    color: #ffffff;
     font-size: 1.8em;
     padding: 0 20px;
+    border: 2px solid #d53453;
     font-weight: bold;
     border-radius: 25px;
-    border: 2px solid #1f1f1f;
     align-self: center;
+    transition: .3s all ease-in-out;
+    cursor: pointer;
 }
 
 .main-footer{
