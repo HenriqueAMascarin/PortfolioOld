@@ -447,7 +447,7 @@ a{
 .text-contact{
     background-color: #1f1f1f;
     border: 0;
-    width: 30rem;
+    width: 80%;
     height: 3rem;
     margin-bottom: 15px;
     border-radius: 10px;
@@ -471,7 +471,7 @@ a{
 .textarea{
     resize: none;
     height: 8rem;
-    width: 90%;
+    width: 80%;
 }
 
 .contact-button{

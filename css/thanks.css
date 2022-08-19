@@ -5,16 +5,6 @@ html{
     text-align: center;
 }
 
-h1{
-    margin: 0;
-    text-shadow: 0px 0px 15px #000000,
-                 0px 0px 15px #d53453;
-    font-size: 5em;
-    padding: 0 14px;
-    font-weight: bold;
-    color: #d53453;
-}
-
 span{
     color: #ffffff;
 }
@@ -25,9 +15,9 @@ p{
     padding: 0 20px;
     text-shadow: 0px 0px 15px #000000;
     font-weight: normal;
-    color: #d53453;
     line-height: 1.2;
     letter-spacing: .8px;
+    margin: 0;
 }
 
 ul{
@@ -40,7 +30,6 @@ a{
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
-    
 }
 
 ::-webkit-scrollbar{
@@ -62,64 +51,59 @@ a{
     display: block;
 }
 
-
-.main-header{
-    position: relative;
-    left: 0px;
-    top: 0px;
-    z-index: 2;
-}
-.navbar{
+.flex{
     display: flex;
-    justify-content: space-between;
+    flex-flow: column nowrap;
+    justify-content: center;
     align-items: center;
-    min-height: 70px;
-    background-image: linear-gradient(-45deg,rgb(31, 31, 31) 45%, rgb(213, 52, 83) 45.3%);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
 }
 
-.nav-menu{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    left: 0;
-    gap: 0;
-    flex-direction: column;
-    background-color: #1f1f1f;
-    width: 100%;
-    transition: 0.3s;
+.back_button{
+    background-color: #d53453;
+    padding: 10px 40px;
+    border-radius: 30px;
+    font-size: 2.5em;
+    box-shadow: 0px 0px 10px -0px rgba(0, 0, 0, 1);
+    margin: 30px 0 100px;
+    transition: .3s all ease-in-out;
+}
+
+.back_button:focus, .back_button:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1),
+                0px 0px 10px rgba(0, 0, 0, 1),
+                0px 0px 15px #d53453;
+    outline: 0;
 }
 
 .main-section{
     background-image: url(../images/bolinhas.svg);
     background-color: rgb(38, 38, 38);
     background-position: bottom center;
-    height: 100vh;
 }
 .main-section h1{
     color: #ffffff;
-    padding-top: 50%;
-    z-index: 1;
-    font-size: clamp(4em, 10vw, 6em);
+    font-size: clamp(4.5em, 15vw, 6em);
     font-weight: bold;
     white-space: pre-line;
+    margin: 35% 0 20px;
+    padding: 0 14px;
+    text-shadow: 0px 0px 15px #000000,
+                     0px 0px 15px #d53453;
+}
+.main-section p{
+    color: #ffffff;
+    text-shadow: 0px 0px 15px #000000;
+    font-weight: 600;
 }
 
 .main-footer{
     background-color: rgb(31, 31, 31);
-    margin: 0;
-    padding: 0;
-    height: 100%;
     background-image: linear-gradient(to top,rgb(31, 31, 31) 94%,rgb(38, 38, 38) 94%);
 }
 .main-footer::before{
     content: "";
     height: 40px;
-    width: 100%;
     display: block;
     position: relative;
     border-radius: 90% 90% 0 0;
@@ -128,10 +112,10 @@ a{
     z-index: 0;
 }
 
-
 .copyright{
     display: inline-block;
     padding: 0 30px;
+    margin: 4% 0 3px;
     color: rgb(107, 106, 106);
     font-family: 'Farro', Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -141,41 +125,18 @@ a{
 .copyright:hover{
     color: rgb(226, 226, 226);
 }
-@media screen and (max-width:20em){
-    .circles{
-        background-image: url(../images/bolinhas.svg);
-        height: 780px;
-        position: absolute;
-        width: 100%;
-        background-size: 20em 62em;
-    }
-}
-@media screen and (min-width:30em){
-    .circles{
-        background-size: clamp(26em, 100vw, 35em) 50em;
-    }
-}
+
 @media screen and (min-width:62.5em){
     .main-section{
         background-image: linear-gradient(to top,rgb(38, 38, 38) 6%, rgb(33, 33, 33) 6%);
     }
-    .info{
-        background-image: linear-gradient(to top,rgb(48, 48, 48) 6%, rgb(38, 38, 38) 6%);
-        padding-top: 130px;
-    }
-    .abilities{
-        background-image: linear-gradient(to top,rgb(58, 58, 58) 6%,rgb(48, 48, 48) 6%);
-        padding-top: 120px;
-    }
-    .principal-projects{
-        background-image: linear-gradient(to top,rgb(65, 65, 65) 6%, rgb(58, 58, 58) 6%);
-    }
+
     .main-footer{
         background-image: linear-gradient(to top,rgb(31, 31, 31) 80%,rgb(65, 65, 65) 80%);
     }
 
     
-    .main-section::after, .info::after, .abilities::after, .main-footer::before, .principal-projects::after{
+    .main-footer::before{
         height: 100px;
     }
     
@@ -200,77 +161,13 @@ a{
         position: relative;
     }
 
-    .hamburguer{
-        display: none;
-    }
-    .nav-menu.active{
-        background-color: #1f1f1f;;
-    }
-    .nav-menu li:not(.logotipo){
-        font-size: clamp(2.3em, 3vw, 3em);
-        flex-basis: 0px;
-    }
-    .logotipo{
-        padding: 0 5%;
-        background-color: #d53453; 
-        flex-basis: 100px;
-    }
     .flex{
         display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        width: auto;
-        height: auto;
-    }
-    .flex h1{
-        text-align: start;
-        font-size: 4em;
-        padding: 80px 0 0;
-        margin-right: 30px;
-    }
-
-    .main-section .flex{
-        padding: 130px 100px 0;
-    }
-    .circles{
-        background-image: url(/images/bolinhas\ pc.svg);
-        height: 840px; 
-        background-size: clamp(40em, 100vw, 70em) 55em;
-    }
-
-    .flex article{
-        width: 50%;
-        font-size: 1.2em;
-        margin-right: 30px;
-    }
-    .flex h2{
-        font-size: 3em;
-    }
-    .flex p{
-        padding: 0 70px;
-    }
-    .pixel-arts{
-        width: 608px;
-    }
-
-    .contact{
-        top: -150px;
-    }
-    .flex-contact{
-        display: flex;
-        flex-flow: row nowrap;
+        flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
-        gap: 260px;
-        font-size: 1.5em;
     }
-    .flex-contact h2{
-        margin: 0;
-        padding: 0;
-        width: 50%;
-    }
-    .flex-contact a{
-        margin: 0;
-        width: 20%;
+    .flex h1{
+        font-size: 4em;
     }
 }
