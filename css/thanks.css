@@ -4,9 +4,6 @@ html{
     font-family: 'Farro', Arial, Helvetica, sans-serif;
     text-align: center;
 }
-html,body{
-    height: 100%;
-}
 
 span{
     color: #ffffff;
@@ -65,7 +62,6 @@ a{
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 58.4px); 
 }
 
 .back-button{
@@ -89,8 +85,9 @@ a{
 .main-footer{
     background-color: rgb(31, 31, 31);
     background-image: linear-gradient(to top,rgb(31, 31, 31) 85%,rgb(38, 38, 38) 85%);
-    
+    margin-top: auto;
 }
+
 .main-footer::before{
     content: "";
     height: 40px;
@@ -119,7 +116,6 @@ a{
 
 @media screen and (min-width:50em){
 
-    
     .main-section{
         background-image: url(../images/bolinhas-pc.svg);
         background-color: rgb(38, 38, 38);
