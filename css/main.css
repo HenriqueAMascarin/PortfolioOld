@@ -278,6 +278,14 @@ a{
     box-shadow: 0px 10px 10px -0px rgba(0, 0, 0, 1);
 }
 
+.logos-abilities{
+    width: clamp(80px, 20vw, 200px);
+    filter: drop-shadow(0px 0px 5px rgb(213, 52, 83)); 
+    background-color: #1f1f1f;
+    z-index: 1;
+    position: relative;
+} 
+
 .principal-projects{
     background-color: rgb(58, 58, 58);
 }
