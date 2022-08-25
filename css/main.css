@@ -322,7 +322,7 @@ a{
     justify-content: center;
     position: relative;
 } 
-.image-project-div{
+.project-div{
     border-radius: 100%;
     cursor: pointer;
     display: flex;
@@ -330,19 +330,22 @@ a{
     justify-content: center;
     position: relative;
     z-index: 1;
-}
-.image-project-div img{
-    width: clamp(15em, 70vw, 25em);
     filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 1))
             drop-shadow(0px 0px 6px rgba(213, 52, 83, 1));
 }
 
-@keyframes scale{
+.project-image{
+    width: clamp(15em, 70vw, 25em);
+    filter: brightness(60%);
+    transition: 0.3s ease-in-out;
+}
+
+@keyframes scaleFont{
     0%, 100%{
-        transform: scale(1);
+        font-size: clamp(1.6em, 8vw,3em);;
     }
     50%{
-        transform: scale(1.1);
+        font-size: calc(clamp(1.7em, 8vw,3.1em) + 0.4em);
     }
 }
 .title-project{
@@ -357,10 +360,11 @@ a{
                 1px 1px 0 #ffffff;
     font-size: clamp(1.6em, 8vw,3em);
     white-space: pre-line;
-    
+    animation: scaleFont 3s infinite ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 .title-act.active{
-    animation: scale 3s infinite ease-in-out;
+    animation: scaleFont 3s infinite ease-in-out;
 }
 
 .project-card{
@@ -370,9 +374,9 @@ a{
 .project-info{
     background-color: #1f1f1f;
     position: absolute;
-    top: 28%;
+    top: 32%;
     height: 56%;
-    padding-top: 20%;
+    padding: 14% 0 4%;
     width: 85%;
     display: flex;
     align-items: center;
@@ -440,7 +444,7 @@ a{
 
 .selection-buttons{
     width: auto;
-    margin-top: 30px;
+    margin-top: 20px;
     height: 40px;
     display: block;
 }
