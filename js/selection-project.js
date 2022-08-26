@@ -23,3 +23,8 @@ $project.addEventListener("click", () => {
         click = 1;
     } 
 });
+
+// e.stopPropagation();
+//                 console.log(this)
+//                 console.log(e.currentTarget);
+//                 console.log(e.target);
