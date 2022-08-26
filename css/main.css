@@ -378,7 +378,7 @@ a{
     height: 56%;
     padding: 14% 0 4%;
     width: 85%;
-    display: inline-block;
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-flow: column nowrap;
