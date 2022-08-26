@@ -5,21 +5,22 @@ const $title = document.querySelector(".title-project");
 const $projectImage = document.querySelector(".project-image");
 var click = 1;
 
-function projectInfoHide(scaleProject,scaleTitle,brightnessImage){
-    
-    $projectInfo.style.transform = scaleProject;
-    $title.style.transform = scaleTitle;
-    $projectImage.style.filter = brightnessImage;
+function projectInfoHide(){
+    $projectInfo.classList.add("projectInfo-close");
+    $title.classList.add("titleAct-close");
+    $projectImage.classList.add("projectImage-close");
 }
-projectInfoHide("scaleY(0)", "scale(0)", "brightness(100%)");
+projectInfoHide();
 
 //PROJECT DIV CLICK
 $project.addEventListener("click", () => {
     if(click === 1){
-        projectInfoHide("scaleY(1)", "scale(1)", "brightness(60%)");
+        $projectInfo.classList.remove("projectInfo-close");
+        $title.classList.remove("titleAct-close");
+        $projectImage.classList.remove("projectImage-close");
         click = 0;
     }else{
-        projectInfoHide("scaleY(0)", "scale(0)", "brightness(100%)");
+        projectInfoHide();
         click = 1;
     } 
 });

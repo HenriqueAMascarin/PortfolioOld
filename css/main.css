@@ -302,7 +302,7 @@ a{
 }
 
 .projects{
-    display: inline-flex;
+    display: inline-block;
     margin: 25px 0 0;
     overflow: hidden;
     width: clamp(15em, 70vw, 25em);
@@ -339,6 +339,9 @@ a{
     filter: brightness(60%);
     transition: 0.3s ease-in-out;
 }
+.projectImage-close{
+    filter: brightness(100%);
+}
 
 @keyframes scaleFont{
     0%, 100%{
@@ -362,29 +365,33 @@ a{
     white-space: pre-line;
     animation: scaleFont 3s infinite ease-in-out;
     transition: 0.3s ease-in-out;
+    opacity: 1;
 }
-.title-act.active{
-    animation: scaleFont 3s infinite ease-in-out;
-}
-
-.project-card{
-    padding-bottom: 270px;
+.titleAct-close{
+    animation: 0;
+    opacity: 0;
 }
 
 .project-info{
     background-color: #1f1f1f;
-    position: absolute;
-    top: 32%;
+    position: relative;
     height: 56%;
     padding: 14% 0 4%;
     width: 85%;
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-flow: column nowrap;
     border-radius: 20px;
     transition: 0.3s ease-in-out;
     transform-origin: top;
+    transform: scaleY(1);
+    bottom: 80px;
+}
+
+.projectInfo-close{
+    transform: scaleY(0);
+    bottom: 100px;
+    height: 0;
 }
 .project-line{
     padding: 8px 40%;
@@ -443,10 +450,10 @@ a{
 }
 
 .selection-buttons{
-    width: auto;
-    margin-top: 20px;
     height: 40px;
     display: block;
+    position: relative;
+    bottom: 30px;
 }
 .ball{
     width: 30px;
