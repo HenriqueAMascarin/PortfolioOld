@@ -1,31 +1,40 @@
-const $project = document.querySelector(".project-div");
-const $projectInfo = document.querySelector(".project-info");
-const $projectCard = document.querySelector(".project-card");
-const $title = document.querySelector(".title-project");
-const $projectImage = document.querySelector(".project-image");
-var click = 1;
+const $projects = document.querySelector(".projects");
+const $project = document.querySelectorAll(".project-div");
+const $projectInfo = document.querySelectorAll(".project-info");
+const $title = document.querySelectorAll(".title-project");
+const $projectImage = document.querySelectorAll(".project-image");
+const $selectionbuttons = document.querySelector(".selection-buttons");
 
-function projectInfoHide(){
-    $projectInfo.classList.add("projectInfo-close");
-    $title.classList.add("titleAct-close");
-    $projectImage.classList.add("projectImage-close");
+function javaScriptEnable(){
+    $projects.classList.add("projects-js");
+    $selectionbuttons.classList.add("selectionButtons-js");
 }
+javaScriptEnable()
+
+function projectInfoHide(currentLength){
+    for (var i = 0; i < $projectInfo.length; i++){
+        $projectInfo[currentLength || i].classList.add("projectInfo-close");
+        $title[currentLength || i].classList.add("titleAct-close");
+        $projectImage[currentLength || i].classList.add("projectImage-close");
+    }
+}
+
+function projectOpen(currentLength){
+    $projectInfo[currentLength].classList.remove("projectInfo-close");
+    $title[currentLength].classList.remove("titleAct-close");
+    $projectImage[currentLength].classList.remove("projectImage-close");
+}
+
 projectInfoHide();
 
 //PROJECT DIV CLICK
-$project.addEventListener("click", () => {
-    if(click === 1){
-        $projectInfo.classList.remove("projectInfo-close");
-        $title.classList.remove("titleAct-close");
-        $projectImage.classList.remove("projectImage-close");
-        click = 0;
-    }else{
-        projectInfoHide();
-        click = 1;
-    } 
-});
-
-// e.stopPropagation();
-//                 console.log(this)
-//                 console.log(e.currentTarget);
-//                 console.log(e.target);
+for(var i = 0; i < $project.length; i++){
+    $project[i].addEventListener("click", (e) => {
+        var currentLength = Array.prototype.indexOf.call($project,e.currentTarget);
+        if($projectInfo[currentLength].classList.contains('projectInfo-close')){
+            e.currentTarget = projectOpen(currentLength);
+        }else{
+            e.currentTarget = projectInfoHide(currentLength);
+        } 
+    });
+}

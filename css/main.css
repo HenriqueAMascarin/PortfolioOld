@@ -302,7 +302,7 @@ a{
 }
 
 .projects{
-    display: inline-block;
+    display: inline-flex;
     margin: 25px 0 0;
     overflow: hidden;
     width: clamp(15em, 70vw, 25em);
@@ -310,8 +310,11 @@ a{
     user-select: none;
     align-items: center;
     justify-content: left;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     gap: 60px;
+}
+.projects-js{
+    flex-flow: row nowrap;
 }
 .project-card{
     width: clamp(15em, 70vw, 25em);
@@ -366,6 +369,7 @@ a{
     animation: scaleFont 3s infinite ease-in-out;
     transition: 0.3s ease-in-out;
     opacity: 1;
+    pointer-events: none;
 }
 .titleAct-close{
     animation: 0;
@@ -451,9 +455,12 @@ a{
 
 .selection-buttons{
     height: 40px;
-    display: block;
+    display: none;
     position: relative;
     bottom: 30px;
+}
+.selectionButtons-js{
+    display: block;
 }
 .ball{
     width: 30px;
