@@ -230,6 +230,7 @@ a{
     z-index: 1;
     width: 272.5px;
     image-rendering: pixelated;
+    filter: drop-shadow(0px 0px 5px rgb(0, 0, 0)); 
 }
 
 .info{
@@ -303,10 +304,12 @@ a{
 
 .projects{
     margin: 25px 0 0;
-    overflow-x: scroll;
     width: clamp(15em, 70vw, 25em);
     position: relative;
     display: inline-flex;
+    overflow-x: hidden;
+    border-radius: 100px;
+    transition: all 0.5s ease;
 }
 .project-container{
     display: inline-flex;
@@ -316,7 +319,6 @@ a{
     align-items: center;
     justify-content: left;
     flex-flow: column nowrap;
-    gap: 60px;
 }
 .projects-js{
     flex-flow: row nowrap;
@@ -475,22 +477,30 @@ a{
     bottom: 30px;
 }
 .selectionButtons-js{
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 .ball{
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 45px;
     background-color: #ffffff;
-    display: inline-block;
-    border-radius: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 1),
                 0px 0px 6px rgba(213, 52, 83, 1);
     cursor: pointer;
     transition: all 0.5s ease;
 }
 
-.ball:nth-child(2){
-    margin: 0 20px;
+.ball::before{
+    color: #d53453;
+    font-size: 1.8em;
+    text-shadow: 0px 0px 5px #ffffff,
+                0px 0px 5px #ffffff;
 }
 
 .currentButton{

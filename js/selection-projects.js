@@ -2,7 +2,7 @@ const projects = document.querySelectorAll(".project-card");
 const ballSelection = document.querySelectorAll(".ball");
 const projectDiv = document.querySelector(".project-card")
 const projectsAll = document.querySelector(".projects");
-
+var currentLength = 1;
 function addClass(current){
     var x = 0;
     while(ballSelection[x]){
@@ -14,16 +14,33 @@ function addClass(current){
     ballSelection[current].classList.add("currentButton");
 }
 
-function setSlidePosition (current){
-    
-
+function currentButton(currentBall){
+    addClass(currentBall);
 }
 
-for(var i = 0; i < ballSelection.length; i++){
-    ballSelection[i].addEventListener("click", (e) => {
-        var currentLength = Array.prototype.indexOf.call(ballSelection,e.currentTarget);
-        addClass(currentLength);
-        setSlidePosition(currentLength);
-        console.log(currentLength)
-    });
+ballSelection[0].addEventListener("click", (e) =>{
+    if(currentLength > 1){
+        currentLength -= 1;
+        UpdateCarousel(currentLength, "left");
+    }
+    console.log(currentLength)
+    
+    currentButton(0);
+});
+ballSelection[1].addEventListener("click", (e) =>{
+    if(currentLength < projects.length){
+        currentLength += 1;
+        UpdateCarousel(currentLength, "right");
+    }
+    console.log(currentLength)
+    currentButton(1);
+});
+
+function UpdateCarousel (current, direction){
+    var projectWidth = projectDiv.clientWidth;
+    if(direction === "right"){
+        projectsAll.scrollLeft += projectWidth;
+    }else{
+        projectsAll.scrollLeft -= projectWidth;
+    }
 }
