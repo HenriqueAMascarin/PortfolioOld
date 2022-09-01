@@ -324,15 +324,6 @@ a{
     flex-flow: row nowrap;
 }
 
-.projects::-webkit-scrollbar{
-    display: none;
-}
-/* Hide scrollbar for IE, Edge and Firefox */
-.project-card{
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-}
-
 .project-card{
     width: clamp(15em, 70vw, 25em);
     transition: all 0.5s ease;

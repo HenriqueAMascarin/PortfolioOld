@@ -1,8 +1,9 @@
 const projects = document.querySelectorAll(".project-card");
 const ballSelection = document.querySelectorAll(".ball");
 const projectDiv = document.querySelector(".project-card")
-const projectsAll = document.querySelector(".projects");
-var currentLength = 1;
+const projectContainer = document.querySelector(".project-container")
+var currentLength = 0;
+var currentButton;
 function addClass(current){
     var x = 0;
     while(ballSelection[x]){
@@ -12,6 +13,7 @@ function addClass(current){
         x++;
     }
     ballSelection[current].classList.add("currentButton");
+    
 }
 
 function currentButton(currentBall){
@@ -19,28 +21,36 @@ function currentButton(currentBall){
 }
 
 ballSelection[0].addEventListener("click", (e) =>{
-    if(currentLength > 1){
+    if(currentLength > 0){
         currentLength -= 1;
-        UpdateCarousel(currentLength, "left");
+        UpdateCarousel("left");
     }
-    console.log(currentLength)
-    
     currentButton(0);
 });
 ballSelection[1].addEventListener("click", (e) =>{
-    if(currentLength < projects.length){
+    if(currentLength < (projects.length - 1)){
         currentLength += 1;
-        UpdateCarousel(currentLength, "right");
+        UpdateCarousel("right");
     }
-    console.log(currentLength)
     currentButton(1);
 });
 
-function UpdateCarousel (current, direction){
+function UpdateCarousel (direction){
     var projectWidth = projectDiv.clientWidth;
+
     if(direction === "right"){
-        projectsAll.scrollLeft += projectWidth;
+        projectContainer.style.transform = "translateX(-" + (projectWidth * currentLength) + "px)";
     }else{
-        projectsAll.scrollLeft -= projectWidth;
+        projectContainer.style.transform = "translateX(-" + (projectWidth * currentLength) + "px)";
     }
 }
+
+window.addEventListener("resize", (e) => {
+    if(currentButton === 1){
+        UpdateCarousel("right");
+        console.log("foi");
+    }else if(currentButton === 0){
+        UpdateCarousel("left");
+        console.log("esquerda");
+    }
+});
