@@ -356,10 +356,10 @@ a{
 
 @keyframes scaleFont{
     0%, 100%{
-        font-size: clamp(1.6em, 8vw,3em);;
+        transform: scale(1);
     }
     50%{
-        font-size: calc(clamp(1.7em, 8vw,3.1em) + 0.4em);
+        transform: scale(1.2);
     }
 }
 .title-project{
@@ -374,7 +374,7 @@ a{
                 1px 1px 0 #ffffff;
     font-size: clamp(1.6em, 8vw,3em);
     white-space: pre-line;
-    /* animation: scaleFont 3s infinite ease-in-out; */
+    animation: scaleFont 3s infinite ease-in-out;
     transition: 0.3s ease-in-out;
     opacity: 1;
     pointer-events: none;
