@@ -16,8 +16,10 @@ function addClass(current){
     
 }
 
+var current = 0;
 function currentButton(currentBall){
     addClass(currentBall);
+    current = currentBall;
 }
 
 ballSelection[0].addEventListener("click", (e) =>{
@@ -45,12 +47,12 @@ function UpdateCarousel (direction){
     }
 }
 
-window.addEventListener("resize", (e) => {
-    if(currentButton === 1){
-        UpdateCarousel("right");
-        console.log("foi");
-    }else if(currentButton === 0){
-        UpdateCarousel("left");
-        console.log("esquerda");
-    }
+window.addEventListener("resize", function () {
+    setTimeout(() => {
+        if(current === 1){
+            UpdateCarousel("right");
+        }else{
+            UpdateCarousel("left");
+        }
+    }, 600);
 });

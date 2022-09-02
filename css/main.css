@@ -390,7 +390,7 @@ a{
     height: 56%;
     padding: 14% 0 4%;
     width: 85%;
-    display: flex;
+    display: inline-block;
     align-items: center;
     flex-flow: column nowrap;
     border-radius: 20px;
