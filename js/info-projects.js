@@ -9,35 +9,26 @@
     function javaScriptEnable(){
         $projects.classList.add("projects-js");
         $selectionbuttons.classList.add("selectionButtons-js");
+        for(var i = 0; i < $project.length; i++){
+            $projectInfo[i].classList.add("projectInfo-close");
+            $title[i].classList.add("titleAct-close");
+            $projectImage[i].classList.add("projectImage-close");
+        }
     }
     javaScriptEnable()
 
     function projectInfoHide(currentLength){
-        for (var i = 0; i < $projectInfo.length; i++){
-            $projectInfo[currentLength || i].classList.add("projectInfo-close");
-            $title[currentLength || i].classList.add("titleAct-close");
-            $projectImage[currentLength || i].classList.add("projectImage-close");
+            $projectInfo[currentLength].classList.toggle("projectInfo-close");
+            $title[currentLength].classList.toggle("titleAct-close");
+            $projectImage[currentLength].classList.toggle("projectImage-close");
+    }
+
+    //PROJECT DIV CLICK//
+    $projects.addEventListener("click", (e) => {
+        if(e.target.classList.contains('project-div')){
+            var currentLength = Array.prototype.indexOf.call($project, e.target);
+            e.target = projectInfoHide(currentLength);
         }
-    }
-
-    function projectOpen(currentLength){
-        $projectInfo[currentLength].classList.remove("projectInfo-close");
-        $title[currentLength].classList.remove("titleAct-close");
-        $projectImage[currentLength].classList.remove("projectImage-close");
-    }
-
-    projectInfoHide();
-
-    //PROJECT DIV CLICK
-    for(var i = 0; i < $project.length; i++){
-        $project[i].addEventListener("click", (e) => {
-            var currentLength = Array.prototype.indexOf.call($project,e.currentTarget);
-            if($projectInfo[currentLength].classList.contains('projectInfo-close')){
-                e.currentTarget = projectOpen(currentLength);
-            }else{
-                e.currentTarget = projectInfoHide(currentLength);
-            } 
-        });
-    }
+    })
 
 })();

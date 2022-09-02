@@ -6,7 +6,6 @@ html{
     background-color: #1f1f1f;
 }
 
-
 h1,h2,h3{
     margin: 0;
     text-shadow: 0px 0px 15px #000000;
@@ -302,6 +301,10 @@ a{
     box-shadow: 0px 10px 10px -0px rgba(0, 0, 0, 1);
 }
 
+.project-container, .project-card, .project-image, .title-project{
+    pointer-events: none;
+}
+
 .projects{
     margin: 25px 0 0;
     width: clamp(15em, 70vw, 25em);
@@ -315,7 +318,6 @@ a{
     display: inline-flex;
     transition: all 0.2s;
     height: 100%;
-    user-select: none;
     align-items: center;
     justify-content: left;
     flex-flow: column nowrap;
@@ -340,6 +342,7 @@ a{
     align-items: center;
     justify-content: center;
     position: relative;
+    pointer-events: auto;
     z-index: 1;
     filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 1))
             drop-shadow(0px 0px 6px rgba(213, 52, 83, 1));
@@ -377,7 +380,6 @@ a{
     animation: scaleFont 3s infinite ease-in-out;
     transition: 0.3s ease-in-out;
     opacity: 1;
-    pointer-events: none;
 }
 .titleAct-close{
     animation: 0;
