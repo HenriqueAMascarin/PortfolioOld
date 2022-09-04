@@ -48,7 +48,7 @@ a{
 
 ::-webkit-scrollbar{
     width: 10px;
-    background-color: #1f1f1f;
+    background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb{
@@ -78,7 +78,7 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 70px;
+    min-height: 60px;
     background-image: linear-gradient(-45deg,rgb(31, 31, 31) 45%, rgb(213, 52, 83) 45.3%);
     position: fixed;
     top: 0;
@@ -92,7 +92,7 @@ a{
     align-items: center;
     position: fixed;
     left: -100%;
-    top: 70px;
+    top: 60px;
     gap: 0;
     flex-direction: column;
     background-color: #1f1f1f;
@@ -173,7 +173,7 @@ a{
 }
 
 .main-section{
-    background-color: rgb(33, 33, 33);
+    background-image: linear-gradient(to top,rgb(38, 38, 38) 4%, rgb(33, 33, 33) 4%);
 }
 .main-section h1{
     color: #ffffff;
@@ -233,7 +233,7 @@ a{
 }
 
 .info{
-    background: rgb(38, 38, 38);
+    background-image: linear-gradient(to top,rgb(48, 48, 48) 4%, rgb(38, 38, 38) 4%);
 }
 .info::after{
     content: "";
@@ -247,54 +247,15 @@ a{
     box-shadow: 0px 10px 10px -0px rgba(0, 0, 0, 1);
 }
 
-.abilities{
-    background-color: rgb(48, 48, 48);
-}
-.tecnologies{
-    margin: 45px 0 0;
-    position: relative;
-    z-index: 1;
-    display: inline-flex;
-    flex-flow: row wrap;
-    width: 80%;
-    align-items: center;
-    justify-content: center;
-    background-color: #1f1f1f;
-    padding: 20px 0px;
-    border-radius: 30px;
-    gap: 30px;
-    filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 1));
-}   
-
-.abilities::after{
-    content: "";
-    height: 40px;
-    width: 100%;
-    z-index: 0;
-    background-color: rgb(48, 48, 48);
-    border-radius: 0px 0px 90% 90%;
-    position: relative;
-    display: block;
-    box-shadow: 0px 10px 10px -0px rgba(0, 0, 0, 1);
-}
-
-.logos-abilities{
-    width: clamp(80px, 20vw, 200px);
-    filter: drop-shadow(0px 0px 5px rgb(213, 52, 83)); 
-    background-color: #1f1f1f;
-    z-index: 1;
-    position: relative;
-} 
-
 .principal-projects{
-    background-color: rgb(58, 58, 58);
+    background-image: linear-gradient(to top,rgb(58, 58, 58) 4%,rgb(48, 48, 48) 4%);
 }
 .principal-projects::after{
     content: "";
     height: 40px;
     width: 100%;
     z-index: 0;
-    background-color: rgb(58, 58, 58);
+    background-color: rgb(48, 48, 48);
     border-radius: 0px 0px 90% 90%;
     position: relative;
     display: block;
@@ -316,12 +277,12 @@ a{
 }
 .project-container{
     display: inline-flex;
-    transition: all 0.2s;
-    height: 100%;
-    align-items: center;
     justify-content: left;
     flex-flow: column nowrap;
+    transition: all 0.2s;
+    align-items: flex-start;
 }
+
 .projects-js{
     flex-flow: row nowrap;
 }
@@ -390,7 +351,7 @@ a{
     background-color: #1f1f1f;
     position: relative;
     height: 56%;
-    padding: 14% 0 4%;
+    padding: 28% 0 8%;
     width: 85%;
     display: inline-block;
     align-items: center;
@@ -407,15 +368,7 @@ a{
     bottom: 100px;
     height: 0;
 }
-.project-line{
-    padding: 8px 40%;
-    position: relative;
-    height: 20px;
-    border:solid 6px #d53453;
-    border-color:#d53453 transparent transparent transparent;
-    border-radius: 120%/100px 100px 0 0;
-    transform: rotate(180deg);
-}
+
 .used-logos{
     display: flex;
     align-items: center; 
@@ -443,9 +396,9 @@ a{
 }
 
 .project-info p{
-    margin: 20px 0 22px;
+    margin: 20px 0 50px;
     font-weight: 600;
-    font-size: 1.1em;
+    font-size: 1.3em;
 }
 .project-button{
     padding: 10px;
@@ -467,7 +420,7 @@ a{
     height: 40px;
     display: none;
     position: relative;
-    bottom: 30px;
+    bottom: 60px;
 }
 .selectionButtons-js{
     display: flex;
@@ -501,7 +454,7 @@ a{
 }
 
 .contact-section{
-    background-color: rgb(65, 65, 65);
+    background-color: rgb(58, 58, 58);
     padding-bottom: 60px;
 }
 .contact-section h2{
@@ -565,7 +518,7 @@ a{
 
 .main-footer{
     background-color: rgb(31, 31, 31);
-    background-image: linear-gradient(to top,rgb(31, 31, 31) 94%,rgb(65, 65, 65) 94%);
+    background-image: linear-gradient(to top,rgb(31, 31, 31) 93%,rgb(58, 58, 58) 93%);
     position: relative;
 }
 .main-footer::before{
@@ -652,21 +605,18 @@ a{
     }
     .info{
         background-image: linear-gradient(to top,rgb(48, 48, 48) 6%, rgb(38, 38, 38) 6%);
-        padding-top: 130px;
-    }
-    .abilities{
-        background-image: linear-gradient(to top,rgb(58, 58, 58) 6%,rgb(48, 48, 48) 6%);
-        padding-top: 120px;
+        padding-top: 40px;
     }
     .principal-projects{
-        background-image: linear-gradient(to top,rgb(65, 65, 65) 6%, rgb(58, 58, 58) 6%);
+        background-image: linear-gradient(to top,rgb(58, 58, 58) 6%,rgb(48, 48, 48) 6%);
+        padding-top: 40px;
     }
     .main-footer{
         background-image: linear-gradient(to top,rgb(31, 31, 31) 80%,rgb(65, 65, 65) 80%);
     }
 
     
-    .main-section::after, .info::after, .abilities::after, .main-footer::before, .principal-projects::after{
+    .main-section::after, .info::after, .main-footer::before, .principal-projects::after{
         height: 100px;
     }
     
@@ -706,7 +656,6 @@ a{
         background-color: #d53453; 
         flex-basis: 100px;
         display: block;
-        
     }
     .flex{
         display: flex;

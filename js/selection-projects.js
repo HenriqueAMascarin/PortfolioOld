@@ -2,9 +2,8 @@ const projects = document.querySelectorAll(".project-card");
 const ballSelection = document.querySelectorAll(".ball");
 const projectDiv = document.querySelector(".project-card")
 const projectContainer = document.querySelector(".project-container")
-
 var currentLength = 0;
-
+var select;
 function addClass(current){
     var x = 0;
     while(ballSelection[x]){
@@ -25,6 +24,7 @@ ballSelection[0].addEventListener("click", (e) =>{
         currentLength -= 1;
         UpdateCarousel("left");
     }
+    select = 0;
     currentButton(0);
 });
 ballSelection[1].addEventListener("click", (e) =>{
@@ -32,6 +32,7 @@ ballSelection[1].addEventListener("click", (e) =>{
         currentLength += 1;
         UpdateCarousel("right");
     }
+    select = 1;
     currentButton(1);
 });
 
@@ -46,7 +47,7 @@ function UpdateCarousel (direction){
 
 window.addEventListener("resize", function () {
     setTimeout(() => {
-        if(current === 1){
+        if(select === 1){
             UpdateCarousel("right");
         }else{
             UpdateCarousel("left");
