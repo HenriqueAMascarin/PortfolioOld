@@ -70,10 +70,9 @@ a{
 
 .main-header{
     position: relative;
-    left: 0px;
-    top: 0px;
     z-index: 2;
 }
+
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -98,6 +97,15 @@ a{
     background-color: #1f1f1f;
     width: 100%;
     transition: 0.3s;
+}
+
+.navbar-noJs{
+    flex-flow: column nowrap;
+    position: relative;
+}
+.navmenu-noJs{
+    position: relative;
+    left: 0;
 }
 
 .nav-item{
@@ -158,6 +166,7 @@ a{
     gap: 30px;
     margin: 0 60px 0 15px;
 }
+
 .icons a{
     transition: .4s color cubic-bezier(.57,.21,.69,1.25);
 }
@@ -173,7 +182,7 @@ a{
 }
 
 .main-section{
-    background-image: linear-gradient(to top,rgb(38, 38, 38) 4%, rgb(33, 33, 33) 4%);
+    background-image: linear-gradient(to top,rgb(38, 38, 38) 2%, rgb(33, 33, 33) 2%);
 }
 .main-section h1{
     color: #ffffff;
@@ -233,7 +242,7 @@ a{
 }
 
 .info{
-    background-image: linear-gradient(to top,rgb(48, 48, 48) 4%, rgb(38, 38, 38) 4%);
+    background-image: linear-gradient(to top,rgb(48, 48, 48) 2%, rgb(38, 38, 38) 2%);
 }
 .info::after{
     content: "";
@@ -248,7 +257,7 @@ a{
 }
 
 .principal-projects{
-    background-image: linear-gradient(to top,rgb(58, 58, 58) 4%,rgb(48, 48, 48) 4%);
+    background-image: linear-gradient(to top,rgb(58, 58, 58) 2%,rgb(48, 48, 48) 2%);
 }
 .principal-projects::after{
     content: "";
@@ -351,7 +360,7 @@ a{
     background-color: #1f1f1f;
     position: relative;
     height: 56%;
-    padding: 28% 0 8%;
+    padding: 28% 0 10%;
     width: 85%;
     display: inline-block;
     align-items: center;
@@ -704,7 +713,6 @@ a{
     }
     .portfolio{
         top: -30px;
-        
     }
     .portfolio-contact{
         display: flex;

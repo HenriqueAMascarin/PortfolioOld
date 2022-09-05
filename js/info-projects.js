@@ -30,5 +30,4 @@
             e.target = projectInfoHide(currentLength);
         }
     })
-
 })();
