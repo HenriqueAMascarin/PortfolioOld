@@ -73,7 +73,7 @@ a{
     z-index: 2;
 }
 
-.navbar{
+.navBar{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -99,11 +99,11 @@ a{
     transition: 0.3s;
 }
 
-.navbar-noJs{
-    flex-flow: column nowrap;
+.navBar-noJs{
+    flex-direction: column;
     position: relative;
 }
-.navmenu-noJs{
+.navMenu-noJs{
     position: relative;
     left: 0;
 }
@@ -134,6 +134,9 @@ a{
     display: block;
     cursor: pointer;
     margin-right: 20px;
+}
+.hamburguer-noJs{
+    display: none;
 }
 .hamburguer.active .bar:nth-child(2){
     opacity: 0;
@@ -629,7 +632,12 @@ a{
         height: 100px;
     }
     
-    .navbar{
+    .navBar-noJs{
+        flex-direction: row;
+        position: relative;
+    }
+
+    .navBar{
         align-items: baseline;
         background: #1f1f1f;
     }
@@ -640,7 +648,7 @@ a{
     .icons a:hover{
         color: #d53453;
     }
-
+    
     .nav-menu{
         display: inline-flex;
         left:0;
