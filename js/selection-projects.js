@@ -60,14 +60,14 @@ function UpdateCarousel (direction){
 
 window.addEventListener("resize", function () {
     setTimeout(() => {
+        if(currentLength > 0){
+            currentLength -= 1;
+        }
         offset();
         if(select === 1){
             UpdateCarousel("right");
         }else{
             UpdateCarousel("left");
-        }
-        if(currentLength > 0){
-            currentLength -= 1;
         }
     }, 600);
     
