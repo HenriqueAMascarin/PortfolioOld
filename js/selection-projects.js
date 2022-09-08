@@ -1,8 +1,10 @@
 const projects = document.querySelectorAll(".project-card");
 const ballSelection = document.querySelectorAll(".ball");
-const projectDiv = document.querySelector(".project-card")
-const projectContainer = document.querySelector(".project-container")
+const projectDiv = document.querySelector(".project-card");
+const projectContainer = document.querySelector(".project-container");
+const projectScroll = document.querySelector(".projects");
 var currentLength = 0;
+var showingProjects;
 var select;
 function addClass(current){
     var x = 0;
@@ -19,8 +21,19 @@ function currentButton(currentBall){
     addClass(currentBall);
 }
 
+function offset(){
+    if(projectScroll.clientWidth < 704){
+        showingProjects = 1;
+    }else if(projectScroll.clientWidth === 704){
+        showingProjects = 2;
+    }else{
+        showingProjects = 3;
+    }
+}
+offset();
+
 ballSelection[0].addEventListener("click", (e) =>{
-    if(currentLength > 0){
+    if(currentLength < (projects.length) && currentLength > 0){
         currentLength -= 1;
         UpdateCarousel("left");
     }
@@ -28,7 +41,7 @@ ballSelection[0].addEventListener("click", (e) =>{
     currentButton(0);
 });
 ballSelection[1].addEventListener("click", (e) =>{
-    if(currentLength < (projects.length - 1)){
+    if(currentLength < (projects.length - showingProjects)){
         currentLength += 1;
         UpdateCarousel("right");
     }
@@ -47,10 +60,16 @@ function UpdateCarousel (direction){
 
 window.addEventListener("resize", function () {
     setTimeout(() => {
+        offset();
         if(select === 1){
             UpdateCarousel("right");
         }else{
             UpdateCarousel("left");
         }
+        if(currentLength > 0){
+            currentLength -= 1;
+        }
     }, 600);
+    
 });
+

@@ -279,8 +279,9 @@ a{
 }
 
 .projects{
+    --main-width-projects: clamp(16em, 70vw, 22em);
     margin: 25px 0 0;
-    width: clamp(15em, 70vw, 25em);
+    width: var(--main-width-projects);
     position: relative;
     display: inline-flex;
     overflow-x: hidden;
@@ -289,8 +290,8 @@ a{
 }
 .project-container{
     display: inline-flex;
+    flex-flow: column wrap;
     justify-content: left;
-    flex-flow: column nowrap;
     transition: all 0.2s;
     align-items: flex-start;
 }
@@ -300,8 +301,9 @@ a{
 }
 
 .project-card{
-    width: clamp(15em, 70vw, 25em);
+    width: var(--main-width-projects);
     transition: all 0.5s ease;
+    overflow: hidden;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -322,7 +324,7 @@ a{
 }
 
 .project-image{
-    width: clamp(15em, 70vw, 25em);
+    width: var(--main-width-projects);
     filter: brightness(60%);
     transition: 0.3s ease-in-out;
 }
@@ -335,7 +337,7 @@ a{
         transform: scale(1);
     }
     50%{
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
 }
 .title-project{
@@ -348,7 +350,7 @@ a{
                 1px -1px 0px #ffffff,
                 -1px 1px 0px #ffffff,
                 1px 1px 0 #ffffff;
-    font-size: clamp(1.6em, 8vw,3em);
+    font-size: clamp(1.6em, 8vw,2.7em);
     white-space: pre-line;
     animation: scaleFont 3s infinite ease-in-out;
     transition: 0.3s ease-in-out;
@@ -362,9 +364,9 @@ a{
 .project-info{
     background-color: #1f1f1f;
     position: relative;
-    height: 56%;
-    padding: 28% 0 10%;
-    width: 85%;
+    padding: 22% 0 10%;
+    width: 80%;
+    bottom: clamp(80px, 20vw, 120px);
     display: inline-block;
     align-items: center;
     flex-flow: column nowrap;
@@ -372,7 +374,6 @@ a{
     transition: 0.3s ease-in-out;
     transform-origin: top;
     transform: scaleY(1);
-    bottom: 80px;
 }
 
 .projectInfo-close{
@@ -386,13 +387,13 @@ a{
     align-items: center; 
     justify-content: center;
     gap: 10px;
-    margin-top: 5px;
+    margin-top: 10%;
 }
 .span-logos{
     display: flex;
     justify-content: center;
-    border-radius: 100px;
-    width: 20%;
+    border-radius: 100%;
+    width: 22%;
     padding: 10px 0;
     background-color: #d53453;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 1),
@@ -400,7 +401,7 @@ a{
 }
 
 .logo-project{
-    width: 50%;
+    width: 55%;
     filter: drop-shadow(0px 0px 1px rgb(255, 255, 255));
 }
 .span-logos:nth-child(1), .span-logos:nth-child(3){
@@ -410,13 +411,13 @@ a{
 .project-info p{
     margin: 20px 0 50px;
     font-weight: 600;
-    font-size: 1.3em;
+    font-size: clamp(1.3em, 4vw, 1.6em);
 }
 .project-button{
     padding: 10px;
     background-color: #d53453;
     border-radius: 12px;
-    font-size: 1.5em;
+    font-size: clamp(1.5em, 4vw, 2em);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 1),
                 0px 0px 10px rgba(0, 0, 0, 1);
     transition: .3s all ease-in-out;
@@ -627,7 +628,6 @@ a{
         background-image: linear-gradient(to top,rgb(31, 31, 31) 80%,rgb(65, 65, 65) 80%);
     }
 
-    
     .main-section::after, .info::after, .main-footer::before, .principal-projects::after{
         height: 100px;
     }
@@ -680,12 +680,18 @@ a{
         justify-content: center;
         width: auto;
         height: auto;
+        gap: 60px;
     }
     .flex h1{
         text-align: start;
         font-size: 4em;
         padding: 80px 0 0;
         margin-right: 30px;
+    }
+
+    .flex p{
+        margin: 30px 0 0;
+        padding: 0 clamp(20px, 5vw, 150px);
     }
 
     .main-section .flex{
@@ -705,10 +711,23 @@ a{
     .flex h2{
         font-size: 3em;
     }
-    
-    .pixel-arts{
-        width: 608px;
+
+    .projects{
+        width: calc(var(--main-width-projects) * 2); 
     }
+    .project-container{
+        flex-flow: row wrap;
+    }
+    .projects-js{
+        flex-flow: row nowrap;
+    }
+
+    /* .project-info{
+        height: 56%;
+        padding: 18% 0 10%;
+        width: 72%;
+        bottom: 90px;
+    } */
 
     .textarea, .text-contact{
         width: 50%;
@@ -742,5 +761,11 @@ a{
 
     .copyright{
         margin-top: 50px;
+    }
+}
+
+@media screen and (min-width:77.77em){
+    .projects{
+        width: calc(var(--main-width-projects) * 3); 
     }
 }

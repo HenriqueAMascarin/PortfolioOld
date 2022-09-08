@@ -8,13 +8,13 @@
     const $projectImage = document.querySelectorAll(".project-image");
 
     const $selectionbuttons = document.querySelector(".selection-buttons");
-    const ariaControl = $projectCard[1].getAttribute("aria-controls");
+        
+
 
     function javaScriptEnable(){    
         $projects.classList.add("projects-js");
         $selectionbuttons.classList.add("selectionButtons-js");
         for(var i = 0; i < $project.length; i++){
-            $projectInfo[i] = document.getElementById("#" + ariaControl);
             $projectInfo[i].classList.add("projectInfo-close");
             $title[i].classList.add("titleAct-close");
             $projectImage[i].classList.add("projectImage-close");
@@ -23,7 +23,7 @@
     javaScriptEnable()
 
     function projectInfoHide(currentLength){
-            var ariaExpanded = $projectInfo[currentLength].getAttribute("aria-expanded") === true;
+            var ariaExpanded = $projectCard[currentLength].getAttribute("aria-expanded") === "true";
             $projectCard[currentLength].setAttribute("aria-expanded", !ariaExpanded);
             $projectInfo[currentLength].setAttribute("aria-expanded", !ariaExpanded);
 
