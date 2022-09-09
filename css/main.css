@@ -9,7 +9,7 @@ html{
 h1,h2,h3{
     margin: 0;
     text-shadow: 0px 0px 15px #000000;
-    font-size: 3em;
+    font-size: 4em;
     padding: 0 10px;
     font-weight: bold;
     color: #d53453;
@@ -24,7 +24,7 @@ span{
 
 p{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5em;
+    font-size: clamp(1.5em, 5vw, 1.6em);
     padding: 0 20px;
     text-shadow: 0px 0px 15px #000000;
     font-weight: normal;
@@ -215,7 +215,7 @@ a{
     background-repeat: no-repeat;
     background-size: clamp(26em, 100vw, 30em) 60em;
     background-position: bottom center;
-    z-index: 0;
+    z-index: 1;
 }
 
 @keyframes moving{
@@ -236,10 +236,11 @@ a{
     z-index: 1;
 }
 
-.pixel-art{ /* 16 x 31 */
+.pixel-art{
     display: inline-block;
     z-index: 1;
-    width: 272.5px;
+    width: 271px;
+    height: 451px;
     image-rendering: pixelated;
     filter: drop-shadow(0px 0px 5px rgb(0, 0, 0)); 
 }
@@ -472,7 +473,6 @@ a{
 }
 .contact-section h2{
     margin-bottom: 20px;
-    font-size: 4em;
 }
 
 .contact-div{
@@ -625,7 +625,7 @@ a{
         padding-top: 40px;
     }
     .main-footer{
-        background-image: linear-gradient(to top,rgb(31, 31, 31) 80%,rgb(65, 65, 65) 80%);
+        background-image: linear-gradient(to top,rgb(31, 31, 31) 78%,rgb(58, 58, 58) 78%);
     }
 
     .main-section::after, .info::after, .main-footer::before, .principal-projects::after{
@@ -678,38 +678,48 @@ a{
         display: flex;
         flex-flow: row nowrap;
         justify-content: center;
+        align-items: center;
         width: auto;
         height: auto;
-        gap: 60px;
+        gap: 80px;
+        position: relative;
+        z-index: 1;
     }
     .flex h1{
         text-align: start;
-        font-size: 4em;
-        padding: 80px 0 0;
-        margin-right: 30px;
+        font-size: clamp(4em, 6vw, 4.5em);
+        padding: 0 0 20px 70px;
     }
 
-    .flex p{
-        margin: 30px 0 0;
-        padding: 0 clamp(20px, 5vw, 150px);
+    .photo-henrique{
+        margin: 20px 0 0 20px;
+        position: relative;
+        top: 50px;
     }
+
 
     .main-section .flex{
         padding: 130px 100px 0;
     }
+    
     .circles{
         background-image: url(/images/bolinhas-pc.svg);
         height: 840px; 
-        background-size: clamp(40em, 100vw, 70em) 55em;
+        background-size: clamp(40em, 100vw, 75em) 55em;
+    }
+    
+    .info .flex{
+        padding: 0;
     }
 
-    .flex article{
-        width: 50%;
-        font-size: 1.2em;
-        margin-right: 30px;
+    .info p{
+        margin: 30px 0 0;
+        font-size: clamp(1.5em, 5vw, 1.8em);
+        max-width: 20em;
     }
-    .flex h2{
-        font-size: 3em;
+
+    .info h2 , .principal-projects h2, .contact-section h2{
+        font-size: clamp(5em, 5vw, 6em);
     }
 
     .projects{
@@ -722,18 +732,11 @@ a{
         flex-flow: row nowrap;
     }
 
-    /* .project-info{
-        height: 56%;
-        padding: 18% 0 10%;
-        width: 72%;
-        bottom: 90px;
-    } */
-
     .textarea, .text-contact{
-        width: 50%;
+        max-width: 700px;
     }
     .contact-button{
-        width: 25%;
+        max-width: 400px;
     }
     .contact{
         top: -130px;
