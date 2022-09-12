@@ -14,9 +14,19 @@ function scrollToPosition(to) {
   smoothScrollTo(0, to);
 }
 
+var position = 0;
+function changePositionWindow(){
+  if(window.innerWidth >= 1000){
+    position = 100;
+  }else{
+    position = 20;
+  }
+}
+
 function scrollToIdOnClick(event) {
+  changePositionWindow();
 	event.preventDefault();
-	const to = getScrollTopByHref(event.currentTarget)- 20;
+	const to = getScrollTopByHref(event.currentTarget)- position;
 	scrollToPosition(to);
 }
 

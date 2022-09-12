@@ -9,7 +9,7 @@ html{
 h1,h2,h3{
     margin: 0;
     text-shadow: 0px 0px 15px #000000;
-    font-size: 4em;
+    font-size: clamp(3em, 18vw, 4em);
     padding: 0 10px;
     font-weight: bold;
     color: #d53453;
@@ -24,7 +24,7 @@ span{
 
 p{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: clamp(1.5em, 5vw, 1.6em);
+    font-size: clamp(1.5em, 5vw, 1.9em);
     padding: 0 20px;
     text-shadow: 0px 0px 15px #000000;
     font-weight: normal;
@@ -118,7 +118,6 @@ a{
     color: #ffffff;
     text-shadow: none;
     transition: .4s all cubic-bezier(.57,.21,.69,1.25);
-    font-size: inherit;
 }
 .nav-link:hover{
     color: #d53453;
@@ -185,7 +184,7 @@ a{
 }
 
 .main-section{
-    background-image: linear-gradient(to top,rgb(38, 38, 38) 2%, rgb(33, 33, 33) 2%);
+    background-image: linear-gradient(to top,rgb(38, 38, 38) 30px, rgb(33, 33, 33) 30px);
 }
 .main-section h1{
     color: #ffffff;
@@ -199,7 +198,6 @@ a{
     content: "";
     height: 40px;
     width: 100%;
-    z-index: 0;
     background: rgb(33, 33, 33);
     border-radius: 0px 0px 90% 90%;
     position: relative;
@@ -239,20 +237,32 @@ a{
 .pixel-art{
     display: inline-block;
     z-index: 1;
-    width: 271px;
-    height: 451px;
+    width: clamp(181.6px, 80vw, 271px);
     image-rendering: pixelated;
     filter: drop-shadow(0px 0px 5px rgb(0, 0, 0)); 
 }
 
 .info{
-    background-image: linear-gradient(to top,rgb(48, 48, 48) 2%, rgb(38, 38, 38) 2%);
+    background-image: linear-gradient(to top,rgb(48, 48, 48) 30px, rgb(38, 38, 38) 30px);
 }
+
+.info p{
+    margin: 20px auto 0;
+    max-width: 600px;
+}
+
+.info p:nth-child(3){
+    margin: 30px auto 0;
+}
+
+.info article{
+    margin-bottom: 40px;
+}
+
 .info::after{
     content: "";
     height: 40px;
     width: 100%;
-    z-index: 0;
     background: rgb(38, 38, 38);
     border-radius: 0px 0px 90% 90%;
     position: relative;
@@ -261,13 +271,12 @@ a{
 }
 
 .principal-projects{
-    background-image: linear-gradient(to top,rgb(58, 58, 58) 2%,rgb(48, 48, 48) 2%);
+    background-image: linear-gradient(to top,rgb(58, 58, 58) 30px,rgb(48, 48, 48) 30px);
 }
 .principal-projects::after{
     content: "";
     height: 40px;
     width: 100%;
-    z-index: 0;
     background-color: rgb(48, 48, 48);
     border-radius: 0px 0px 90% 90%;
     position: relative;
@@ -364,6 +373,7 @@ a{
 
 .project-info{
     background-color: #1f1f1f;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
     position: relative;
     padding: 22% 0 10%;
     width: 80%;
@@ -443,6 +453,8 @@ a{
     gap: 20px;
 }
 .ball{
+    position: relative;
+    z-index: 1;
     width: 50px;
     height: 45px;
     background-color: #ffffff;
@@ -531,7 +543,7 @@ a{
 
 .main-footer{
     background-color: rgb(31, 31, 31);
-    background-image: linear-gradient(to top,rgb(31, 31, 31) 93%,rgb(58, 58, 58) 93%);
+    background-image: linear-gradient(to top,rgb(31, 31, 31) 200px,rgb(58, 58, 58) 200px);
     position: relative;
 }
 .main-footer::before{
@@ -542,7 +554,6 @@ a{
     border-radius: 90% 90% 0 0;
     background-color: rgb(31, 31, 31);
     box-shadow: 0px -10px 10px -0px rgba(0, 0, 0, 1);
-    z-index: 0;
     position: relative;
 }
 
@@ -614,24 +625,31 @@ a{
 }
 @media screen and (min-width:62.5em){
     .main-section{
-        background-image: linear-gradient(to top,rgb(38, 38, 38) 6%, rgb(33, 33, 33) 6%);
+        background-image: linear-gradient(to top,rgb(38, 38, 38) 70px, rgb(33, 33, 33) 70px);
     }
     .info{
-        background-image: linear-gradient(to top,rgb(48, 48, 48) 6%, rgb(38, 38, 38) 6%);
-        padding-top: 40px;
+        background-image: linear-gradient(to top,rgb(48, 48, 48) 120px, rgb(38, 38, 38) 120px);
+        padding-top: 60px;
     }
     .principal-projects{
-        background-image: linear-gradient(to top,rgb(58, 58, 58) 6%,rgb(48, 48, 48) 6%);
-        padding-top: 40px;
+        background-image: linear-gradient(to top,rgb(58, 58, 58) 120px,rgb(48, 48, 48) 120px);
     }
+
     .main-footer{
-        background-image: linear-gradient(to top,rgb(31, 31, 31) 78%,rgb(58, 58, 58) 78%);
+        background-image: linear-gradient(to top,rgb(31, 31, 31) 120px,rgb(58, 58, 58) 120px);
     }
 
     .main-section::after, .info::after, .main-footer::before, .principal-projects::after{
-        height: 100px;
+        height: 80px;
     }
-    
+
+    .info::after{
+        bottom: 60px;
+    }
+    .principal-projects::after{
+        bottom: 80px;
+    }
+
     .navBar-noJs{
         flex-direction: row;
         position: relative;
@@ -672,7 +690,6 @@ a{
         padding: 0 4%;
         background-color: #d53453; 
         flex-basis: 100px;
-        display: block;
     }
     .flex{
         display: flex;
@@ -692,11 +709,11 @@ a{
     }
 
     .photo-henrique{
-        margin: 20px 0 0 20px;
+        margin: 20px 20px 0;
         position: relative;
         top: 50px;
+        width: clamp(25em, 40vw, 28em);
     }
-
 
     .main-section .flex{
         padding: 130px 100px 0;
@@ -710,16 +727,32 @@ a{
     
     .info .flex{
         padding: 0;
+        flex-direction: row-reverse;
+        gap: 100px;
+    }
+
+    .info article{
+        padding-bottom: 80px;
+        margin: 0;
     }
 
     .info p{
-        margin: 30px 0 0;
+        margin: 20px 0 0;
         font-size: clamp(1.5em, 5vw, 1.8em);
         max-width: 20em;
     }
 
+    .info p:nth-child(3){
+        margin: 30px 0 0;
+    }
+
+    .pixel-art{
+        padding: 0 0 20px 90px;
+    }
+
     .info h2 , .principal-projects h2, .contact-section h2{
-        font-size: clamp(5em, 5vw, 6em);
+        font-size: 5em;
+        padding-top: 0px;
     }
 
     .projects{
