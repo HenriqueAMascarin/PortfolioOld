@@ -161,12 +161,13 @@ a{
 }
 
 .icons{
-    font-size: clamp(35px, 15vw, 40px);
+    font-size: clamp(35px, 15vw, 50px);
+    width: fit-content;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
-    margin: 0 60px 0 15px;
+    gap: 25px;
+    margin: 0 0 0 3%;
 }
 
 .icons a{
@@ -657,11 +658,11 @@ a{
 
     .navBar{
         align-items: baseline;
-        background: #1f1f1f;
+        background: #1f1f1f; 
     }
     
     .icons{
-        font-size: 3em;
+        font-size: clamp(3em, 4vw, 3.4em);
     }
     .icons a:hover{
         color: #d53453;
@@ -671,6 +672,7 @@ a{
         display: inline-flex;
         left:0;
         top: 0;
+        justify-content: center;
         align-items: flex-end;
         flex-flow: row nowrap;
         position: relative;
@@ -683,13 +685,20 @@ a{
         background-color: #1f1f1f;;
     }
     .nav-menu li:not(.logotipo){
-        font-size: clamp(2.3em, 3vw, 3em);
-        flex-basis: 0px;
+        font-size: clamp(2.5em, 4vw, 3.4em);
+    }
+    .nav-menu li:nth-child(1){
+        margin-left: auto;
+    }
+    .nav-menu li:nth-child(2){
+        margin: 14px 60px;
     }
     .logotipo{
         padding: 0 4%;
         background-color: #d53453; 
         flex-basis: 100px;
+        margin-left: auto;
+        position: relative;
     }
     .flex{
         display: flex;
@@ -704,7 +713,7 @@ a{
     }
     .flex h1{
         text-align: start;
-        font-size: clamp(4em, 6vw, 4.5em);
+        font-size: clamp(4em, 6vw, 5em);
         padding: 0 0 20px 70px;
     }
 
