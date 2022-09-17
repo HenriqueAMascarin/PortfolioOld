@@ -4,6 +4,8 @@ var windowDisplay = document.querySelector("body");
 windowDisplay.classList.add("hiddenOverflow");
 
 window.addEventListener("load", () =>{
-    windowDisplay.classList.remove("hiddenOverflow")
-    loader.remove();
+    setTimeout(() => {
+        windowDisplay.classList.remove("hiddenOverflow")
+        loader.remove();
+    }, 5000);
 });
