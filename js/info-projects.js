@@ -9,18 +9,16 @@
 
     const $selectionbuttons = document.querySelector(".selection-buttons");
         
-
-
-    function javaScriptEnable(){    
+    (function javaScriptEnable(){    
         $projects.classList.add("projects-js");
         $selectionbuttons.classList.add("selectionButtons-js");
-        for(var i = 0; i < $project.length; i++){
+        for(var i = 0; i < $project.length && $project[i].classList.contains("complete"); i++){
             $projectInfo[i].classList.add("projectInfo-close");
             $title[i].classList.add("titleAct-close");
             $projectImage[i].classList.add("projectImage-close");
         }
-    }
-    javaScriptEnable()
+    })()
+    
 
     function projectInfoHide(currentLength){
             var ariaExpanded = $projectCard[currentLength].getAttribute("aria-expanded") === "true";
@@ -34,7 +32,7 @@
 
     //PROJECT DIV CLICK//
     $projects.addEventListener("click", (e) => {
-        if(e.target.classList.contains('project-div')){
+        if(e.target.classList.contains('complete')){
             var currentLength = Array.prototype.indexOf.call($project, e.target);
             e.target = projectInfoHide(currentLength);
         }

@@ -20,10 +20,6 @@ function addClass(current){
     ballSelection[current].classList.add("currentButton");
 }
 
-function currentButton(currentBall){
-    addClass(currentBall);
-}
-
 function offset(){
     if(projectScroll.clientWidth < 704){
         showingProjects = 1;
@@ -44,7 +40,7 @@ ballSelection[0].addEventListener("click", (e) =>{
         UpdateCarousel("left");
     }
     select = 0;
-    currentButton(0);
+    addClass(0);
 });
 ballSelection[1].addEventListener("click", (e) =>{
     if(currentLength < (projects.length - showingProjects)){
@@ -52,7 +48,7 @@ ballSelection[1].addEventListener("click", (e) =>{
         UpdateCarousel("right");
     }
     select = 1;
-    currentButton(1);
+    addClass(1);
 });
 
 function UpdateCarousel (direction){
@@ -78,4 +74,3 @@ window.addEventListener("resize", () => {
     }, 600);
     
 });
-
