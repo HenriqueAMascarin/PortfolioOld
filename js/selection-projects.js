@@ -55,7 +55,7 @@ function UpdateCarousel (direction){
     var projectWidth = projectDiv.clientWidth;
     if(direction === "right"){
         projectContainer.style.transform = "translateX(-" + (projectWidth * currentLength) + "px)";
-    }else if(direction === "left"){
+    }else{
         projectContainer.style.transform = "translateX(-" + (projectWidth * currentLength) + "px)";
     }
 }

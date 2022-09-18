@@ -22,6 +22,7 @@
     <script src="js/navmenu.js" defer></script>
     <script src="js/info-projects.js" defer></script>
     <script src="js/selection-projects.js" defer></script>
+    <script src="js/scroll-animation.js" defer></script>
 
 </head>
 
@@ -78,7 +79,7 @@
         </section>
 
         <section class="info" id="Sobre">
-            <div class="flex">
+            <div class="flex canAnimate">
                 <article>
                     <h2>Sobre</h2>
                     <p>Minha paixão com a programação começou por conta dos games que eu jogava diariamente, assim
@@ -86,121 +87,122 @@
                             class="red-text">Unity 5</strong><span class="red-text">.</span>
 
                     <p>Mas depois de um bom tempo eu decidi trocar de área, com isso tive a escolha de migrar para o
-                        <strong class="red-text">front-end</strong><span class="red-text">!</span></p>
+                        <strong class="red-text">front-end</strong><span class="red-text">!</span>
+                    </p>
                 </article>
 
                 <img src="images/mario-bloco.png" alt="personagem mario pulando com bloco acima" class="pixel-art">
-
             </div>
         </section>
 
         <section class="principal-projects" id="Projetos">
+            <div class="canAnimate">
+                <h2>Projetos principais</h2>
 
-            <h2>Projetos principais</h2>
-
-            <div class="projects">
-                <div class="project-container">
-                    <div aria-controls="project-info" class="project-card" aria-expanded="false">
-                        <div class="project-div complete">
-                            <p class="title-project">Projeto
-                                Portfólio
-                            </p>
-                            <img src="images/portfolio.png"
-                                alt="Projeto portfólio" class="project-image">
-                        </div>
-                        <div class="project-info">
-                            <div class="used-logos">
-                                <span class="span-logos">
-                                    <img src="images/css3.svg" alt="logo css3" class="logo-project">
-                                </span>
-                                <span class="span-logos">
-                                    <img src="images/javascript.svg" alt="logo javascript" class="logo-project">
-                                </span>
-                                <span class="span-logos">
-                                    <img src="images/html5.svg" alt="logo html5" class="logo-project">
-                                </span>
+                <div class="projects">
+                    <div class="project-container">
+                        <div aria-controls="project-info" class="project-card" aria-expanded="false">
+                            <div class="project-div complete">
+                                <p class="title-project">Projeto
+                                    Portfólio
+                                </p>
+                                <img src="images/portfolio.png" alt="Projeto portfólio" class="project-image">
                             </div>
-                            <p>Portfólio responsivo criado com design único.</p>
-                            <a href="https://henriqueamascarin.vercel.app" target="_blank"
-                                class="project-button">Veja mais</a>
-                        </div>
-                    </div>
-
-                    <div aria-controls="project-info" class="project-card" aria-expanded="false">
-                        <div class="project-div complete">
-                            <p class="title-project">Projeto
-                                Clipboard
-                                Landing
-                                Page
-                            </p>
-                            <img src="images/projeto-landing-page.png"
-                                alt="Projeto clipboard landing page " class="project-image">
-                        </div>
-                        <div class="project-info">
-                            <div class="used-logos">
-                                <span class="span-logos">
-                                    <img src="images/css3.svg" alt="logo css3" class="logo-project">
-                                </span>
-                                <span class="span-logos">
-                                    <img src="images/javascript.svg" alt="logo javascript" class="logo-project">
-                                </span>
-                                <span class="span-logos">
-                                    <img src="images/html5.svg" alt="logo html5" class="logo-project">
-                                </span>
+                            <div class="project-info">
+                                <div class="used-logos">
+                                    <span class="span-logos">
+                                        <img src="images/css3.svg" alt="logo css3" class="logo-project">
+                                    </span>
+                                    <span class="span-logos">
+                                        <img src="images/javascript.svg" alt="logo javascript" class="logo-project">
+                                    </span>
+                                    <span class="span-logos">
+                                        <img src="images/html5.svg" alt="logo html5" class="logo-project">
+                                    </span>
+                                </div>
+                                <p>Portfólio responsivo criado com design único.</p>
+                                <a href="https://henriqueamascarin.vercel.app" target="_blank"
+                                    class="project-button">Veja mais</a>
                             </div>
-                            <p>Desafio de landing page responsiva do site Frontend Mentor.</p>
-                            <a href="https://clipboard-landing-page-works.vercel.app" target="_blank"
-                                class="project-button">Veja mais</a>
                         </div>
-                    </div>
 
-                    <div aria-controls="project-info" class="project-card" aria-expanded="false">
-                        <div class="project-div">
-                            <p class="title-project">Projeto
-                                em
-                                percurso
-                            </p>
-                            <img src="images/projeto-em-andamento.png"
-                                alt="Projeto em andamento" class="project-image">
+                        <div aria-controls="project-info" class="project-card" aria-expanded="false">
+                            <div class="project-div complete">
+                                <p class="title-project">Projeto
+                                    Clipboard
+                                    Landing
+                                    Page
+                                </p>
+                                <img src="images/projeto-landing-page.png" alt="Projeto clipboard landing page "
+                                    class="project-image">
+                            </div>
+                            <div class="project-info">
+                                <div class="used-logos">
+                                    <span class="span-logos">
+                                        <img src="images/css3.svg" alt="logo css3" class="logo-project">
+                                    </span>
+                                    <span class="span-logos">
+                                        <img src="images/javascript.svg" alt="logo javascript" class="logo-project">
+                                    </span>
+                                    <span class="span-logos">
+                                        <img src="images/html5.svg" alt="logo html5" class="logo-project">
+                                    </span>
+                                </div>
+                                <p>Desafio de landing page responsiva do site Frontend Mentor.</p>
+                                <a href="https://clipboard-landing-page-works.vercel.app" target="_blank"
+                                    class="project-button">Veja mais</a>
+                            </div>
+                        </div>
+
+                        <div aria-controls="project-info" class="project-card" aria-expanded="false">
+                            <div class="project-div">
+                                <p class="title-project">Projeto
+                                    em
+                                    percurso
+                                </p>
+                                <img src="images/projeto-em-andamento.png" alt="Projeto em andamento"
+                                    class="project-image">
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="selection-buttons">
+                    <span class="ball icon-arrow-left2"></span>
+                    <span class="ball icon-arrow-right2"></span>
+                </div>
             </div>
-            <div class="selection-buttons">
-                <span class="ball icon-arrow-left2"></span>
-                <span class="ball icon-arrow-right2"></span>
-            </div>
-
         </section>
 
         <section class="contact-section" id="Contato">
-            <h2>Contato</h2>
-            <div class="contact-div">
-                <form action="https://formsubmit.co/bdf322556cb66da0fbbb64e5553677b4" method="POST"
-                    class=".contact-form">
-                    <div>
-                        <input type="text" placeholder="Nome" name="name" class="text-contact input_focus"
-                            autocomplete="off" required>
-                    </div>
+            <div class="canAnimate">
+                <h2>Contato</h2>
+                <div class="contact-div">
+                    <form action="https://formsubmit.co/bdf322556cb66da0fbbb64e5553677b4" method="POST"
+                        class=".contact-form">
+                        <div>
+                            <input type="text" placeholder="Nome" name="name" class="text-contact input_focus"
+                                autocomplete="off" required>
+                        </div>
 
-                    <div>
-                        <input type="email" placeholder="Email" name="email" class="text-contact input_focus" required>
-                    </div>
+                        <div>
+                            <input type="email" placeholder="Email" name="email" class="text-contact input_focus"
+                                required>
+                        </div>
 
-                    <div>
-                        <input type="text" placeholder="Título" name="subject" class="text-contact input_focus"
-                            autocomplete="off">
-                    </div>
+                        <div>
+                            <input type="text" placeholder="Título" name="subject" class="text-contact input_focus"
+                                autocomplete="off">
+                        </div>
 
-                    <div>
-                        <textarea name="msg" name="message" placeholder="Mensagem"
-                            class="text-contact textArea input_focus" autocomplete="off" required></textarea>
-                    </div>
-                    <input type="hidden" name="_next" value="http://henriqueamascarin.vercel.app/thanks.html">
-                    <button type="submit" class="contact-button input_focus">Enviar</button>
-                </form>
+                        <div>
+                            <textarea name="msg" name="message" placeholder="Mensagem"
+                                class="text-contact textArea input_focus" autocomplete="off" required></textarea>
+                        </div>
+                        <input type="hidden" name="_next" value="http://henriqueamascarin.vercel.app/thanks.html">
+                        <button type="submit" class="contact-button input_focus">Enviar</button>
+                    </form>
+                </div>
             </div>
-
         </section>
     </main>
 
