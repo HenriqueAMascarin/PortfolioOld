@@ -46,7 +46,7 @@ a{
     
 }
 .canAnimate{
-    transition: 1s ease-in-out;
+    transition: 0.8s ease-in-out;
 }
 
 .animation{
@@ -538,6 +538,7 @@ a{
     align-items: center;
     justify-content: center;
     gap: 20px;
+    pointer-events: none;
 }
 .ball{
     position: relative;
@@ -553,6 +554,8 @@ a{
                 0px 0px 6px rgba(213, 52, 83, 1);
     cursor: pointer;
     transition: all 0.5s ease;
+    pointer-events: auto;
+    border: 0;
 }
 
 .ball::before{
