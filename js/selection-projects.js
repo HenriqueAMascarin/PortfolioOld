@@ -35,6 +35,7 @@ function offset(){
 offset();
 
 ballSelection[0].addEventListener("click", (e) =>{
+    debugger
     if(currentLength < (projects.length) && currentLength > 0){
         currentLength -= 1;
         UpdateCarousel("left");
@@ -43,6 +44,7 @@ ballSelection[0].addEventListener("click", (e) =>{
     addClass(0);
 });
 ballSelection[1].addEventListener("click", (e) =>{
+    debugger
     if(currentLength < (projects.length - showingProjects)){
         currentLength += 1;
         UpdateCarousel("right");
@@ -52,6 +54,7 @@ ballSelection[1].addEventListener("click", (e) =>{
 });
 
 function UpdateCarousel (direction){
+    debugger
     var projectWidth = projectDiv.clientWidth;
     if(direction === "right"){
         projectContainer.style.transform = "translateX(-" + (projectWidth * currentLength) + "px)";
@@ -61,6 +64,7 @@ function UpdateCarousel (direction){
 }
 
 window.addEventListener("resize", () => {
+    debugger
     setTimeout(() => {
         if(currentLength > 0){
             currentLength -= 1;
