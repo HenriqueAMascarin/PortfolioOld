@@ -7,7 +7,7 @@ const $selectionbuttons = document.querySelector(".selection-buttons");
 
 var currentLength = 0;
 var showingProjects;
-var select;
+var select = 3;
 
 function addClass(current){
     var x = 0;
@@ -62,19 +62,20 @@ function UpdateCarousel (direction){
         projectContainer.style.transform = "translateX(-" + (projectWidth * currentLength) + "px)";
     }
 }
-
-window.addEventListener("resize", () => {
-    debugger
-    setTimeout(() => {
-        if(currentLength > 0){
-            currentLength -= 1;
-        }
-        offset();
-        if(select === 1){
-            UpdateCarousel("right");
-        }else{
-            UpdateCarousel("left");
-        }
-    }, 600);
-    
-});
+if(select === 0 || select === 1){
+    window.addEventListener("resize", () => {
+        debugger
+        setTimeout(() => {
+            if(currentLength > 0){
+                currentLength -= 1;
+            }
+            offset();
+            if(select === 1){
+                UpdateCarousel("right");
+            }else{
+                UpdateCarousel("left");
+            }
+        }, 600);
+        
+    });
+}
