@@ -3,47 +3,47 @@
 html{
     font-family: 'Farro', Arial, Helvetica, sans-serif;
     text-align: center;
+    height: 100%;
 }
 
-span{
-    color: #ffffff;
-}
-
-a{
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-::-webkit-scrollbar{
-    width: 10px;
-    background-color: #1f1f1f;
-}
-
-::-webkit-scrollbar-thumb{
-    width: 10px;
-    background-color: #d53453;
-    border-radius: 10px;
-}
-
-.main-section{
+body{
+    min-height: 100%;
     background-image: url(../images/bolinhas.svg);
     background-color: rgb(38, 38, 38);
     background-position: bottom center;
     background-size: contain;
-    min-height: calc(100vh - 58.4px); 
+    display: flex;
+    flex-direction: column;
+}
+
+.redtext{
+    color: #d53453;
+}
+
+.flex{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+@keyframes movingY {
+    50%{
+        transform: translateY(-15px);
+    }
 }
 
 .main-section h1{
     color: #ffffff;
-    font-size: clamp(3.2em, 19vw, 6em);
+    font-size: clamp(3.2em, 20vw, 7em);
     font-weight: bold;
     white-space: pre-line;
     margin: 100px 0 20px;
     padding: 0 14px;
     text-shadow: 0px 0px 15px #000000,
                      0px 0px 15px #d53453;
-    margin-top: 10%;
+    animation: movingY 2.2s infinite ease-in-out;
 }
 .main-section p{
     color: #ffffff;
@@ -51,26 +51,24 @@ a{
     font-weight: 600;
     white-space: pre-line;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5em;
+    font-size: clamp(1.5em, 2vw, 7em);
     padding: 0 20px;
     line-height: 1.2;
     letter-spacing: .8px;
     margin: 0;
-}
-.flex{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+    max-width: 500px;
 }
 
 .back-button{
     background-color: #d53453;
-    padding: 10px 40px;
+    padding: clamp(10px, 10vw, 15px) clamp(40px, 10vw, 50px);
     border-radius: 30px;
-    font-size: 2.5em;
+    font-size: clamp(2.5em, 10vw, 2.8em);
     box-shadow: 0px 0px 10px -0px rgba(0, 0, 0, 1);
-    margin: 40px 0 100px;
+    margin-top: 40px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
     transition: .3s all ease-in-out;
 }
 
@@ -78,31 +76,19 @@ a{
     transform: scale(1.1);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 1),
                 0px 0px 10px rgba(0, 0, 0, 1),
-                0px 0px 15px #d53453;
+                0px 0px 15px rgba(213, 52, 83, 1);
     outline: 0;
 }
 
 .main-footer{
-    background-color: rgb(31, 31, 31);
-    background-image: linear-gradient(to top,rgb(31, 31, 31) 85%,rgb(38, 38, 38) 85%);
+    background-color: transparent;
     margin-top: auto;
-}
-
-.main-footer::before{
-    content: "";
-    height: 40px;
-    width: 100%;
-    display: block;
-    border-radius: 90% 90% 0 0;
-    background-color: rgb(31, 31, 31);
-    box-shadow: 0px -10px 10px -0px rgba(0, 0, 0, 1);
-    position: absolute;
 }
 
 .copyright{
     display: inline-block;
     padding: 0 50px;
-    margin: 30px 0 10px;
+    margin: auto 0 10px 0;
     color: rgb(107, 106, 106);
     font-family: 'Farro', Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -115,41 +101,10 @@ a{
 }
 
 @media screen and (min-width:50em){
-
-    .main-section{
+    body{
         background-image: url(../images/bolinhas-pc.svg);
-        background-color: rgb(38, 38, 38);
-        background-size: contain;
-        background-position: bottom center;
-        min-height: calc(100vh - 100px);
     }
-
-    .back-button{
-        background-color: #d53453;
-        padding: 15px 50px;
-        border-radius: 30px;
-        font-size: 2.5em;
-        box-shadow: 0px 0px 10px -0px rgba(0, 0, 0, 1);
-        margin: 40px 0 100px;
-        transition: .3s all ease-in-out;
-    }
-    .flex h1{
-        font-size: 7em;
-    }
-    .flex p{
-        font-size: 2em;
-    }
-
-    .main-footer{
-        background-color: rgb(31, 31, 31);
-        background-image: linear-gradient(to top,rgb(31, 31, 31)20%,rgb(38, 38, 38) 20%);
-    }
-
-    .main-footer::before{
-        height: 100px;
-    }
-
-    .copyright{
-        margin-top: 35px;
+    .flex{
+        height: 80vh;
     }
 }

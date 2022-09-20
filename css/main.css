@@ -80,7 +80,7 @@ a{
     font-weight: bold;
     font-size: clamp(1.5em, 5vw, 3em);
 }
-@keyframes teste {
+@keyframes logo {
     0%, 100%{
         text-shadow: 2px 2px transparent,
                 0px 0px 15px #000000;
@@ -97,7 +97,7 @@ a{
     text-shadow: 2px 2px #ffffff,
                 0px 0px 15px #000000;
 
-    animation: teste 3s infinite ease-in-out;
+    animation: logo 3s infinite ease-in-out;
 }
 
 .loading{
@@ -220,18 +220,6 @@ a{
 .hamburguer-noJs{
     display: none;
 }
-.hamburguer.active .bar:nth-child(2){
-    opacity: 0;
-    background: #d53453;
-}
-.hamburguer.active .bar:nth-child(1){
-    transform: translateY(8px) rotate(45deg);
-    background: #d53453;
-}
-.hamburguer.active .bar:nth-child(3){
-    transform: translateY(-8px) rotate(-45deg);
-    background: #d53453;
-}
 
 .bar{
     display: block;
@@ -241,6 +229,19 @@ a{
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     background-color: white;
+}
+
+.hamburguer.active .bar{
+    background: #d53453;
+}
+.hamburguer.active .bar:nth-child(2){
+    opacity: 0;
+}
+.hamburguer.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburguer.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 .icons{
