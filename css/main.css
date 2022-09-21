@@ -47,6 +47,7 @@ a{
 }
 .canAnimate{
     transition: 0.8s ease-in-out;
+    padding-top: 50px;
 }
 
 .animation{
@@ -166,6 +167,7 @@ a{
     top: 0;
     left: 0;
     right: 0;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 1);;
 }
 
 .nav-menu{
@@ -269,9 +271,10 @@ a{
 }
 
 .main-section{
-    background-image: linear-gradient(to top,rgb(38, 38, 38) 30px, rgb(33, 33, 33) 30px);
+    background-color: rgb(33, 33, 33);
     position: relative;
     z-index: 4;
+    border: 0;
 }
 .main-section h1{
     color: #ffffff;
@@ -285,9 +288,9 @@ a{
     width: 100%;
     background: rgb(33, 33, 33);
     border-radius: 0px 0px 90% 90%;
-    position: relative;
+    position: absolute;
     display: block;
-    box-shadow: 0px 10px 10px -0px rgba(0, 0, 0, 1);
+    box-shadow: 0px 10px 10px -4px rgba(0, 0, 0, 1);
 }
 
 .circles{
@@ -310,7 +313,8 @@ a{
 }
 .photo-henrique{
     filter: drop-shadow(4px 0px 0px rgb(213, 52, 83))  
-            drop-shadow(-4px 0px 0px rgb(255, 255, 255)); 
+            drop-shadow(-4px 0px 0px rgb(255, 255, 255))
+            drop-shadow(0px 0px 10px rgb(0, 0, 0)); 
     width: clamp(13em, 80vw, 25em);
     height: auto;
     animation: moving 3s infinite ease-in-out;
@@ -327,7 +331,7 @@ a{
 }
 
 .info{
-    background-image: linear-gradient(to top,rgb(48, 48, 48) 30px, rgb(38, 38, 38) 30px);
+    background-color: rgb(38, 38, 38);
     position: relative;
     z-index: 3;
 }
@@ -351,13 +355,13 @@ a{
     width: 100%;
     background: rgb(38, 38, 38);
     border-radius: 0px 0px 90% 90%;
-    position: relative;
+    position: absolute;
     display: block;
-    box-shadow: 0px 10px 10px -0px rgba(0, 0, 0, 1);
+    box-shadow: 0px 10px 10px -4px rgba(0, 0, 0, 1);
 }
 
 .principal-projects{
-    background-image: linear-gradient(to top,rgb(58, 58, 58) 30px,rgb(48, 48, 48) 30px);
+    background-color: rgb(48, 48, 48);
     position: relative;
     z-index: 2;
 }
@@ -367,9 +371,9 @@ a{
     width: 100%;
     background-color: rgb(48, 48, 48);
     border-radius: 0px 0px 90% 90%;
-    position: relative;
+    position: absolute;
     display: block;
-    box-shadow: 0px 10px 10px -0px rgba(0, 0, 0, 1);
+    box-shadow: 0px 10px 10px -4px rgba(0, 0, 0, 1);
 }
 
  .project-image, .title-project{
@@ -416,7 +420,7 @@ a{
     justify-content: center;
     position: relative;
     pointer-events: auto;
-    z-index: 1;
+    z-index: 2;
     filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 1))
             drop-shadow(0px 0px 6px rgba(213, 52, 83, 1));
 }
@@ -442,7 +446,7 @@ a{
     font-family: 'Farro', Arial, Helvetica, sans-serif;
     color: #d53453;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     text-shadow: 0px 0px 15px #d53453, 
                 -1px -1px 0px #ffffff,
                 1px -1px 0px #ffffff,
@@ -465,6 +469,7 @@ a{
     position: relative;
     padding: 22% 0 10%;
     width: 80%;
+    z-index: 1;
     bottom: clamp(80px, 20vw, 120px);
     display: inline-block;
     align-items: center;
@@ -633,7 +638,6 @@ a{
 }
 
 .main-footer{
-    background-color: rgb(31, 31, 31);
     background-image: linear-gradient(to top,rgb(31, 31, 31) 200px,rgb(58, 58, 58) 200px);
     position: relative;
 }
@@ -644,7 +648,7 @@ a{
     display: block;
     border-radius: 90% 90% 0 0;
     background-color: rgb(31, 31, 31);
-    box-shadow: 0px -10px 10px -0px rgba(0, 0, 0, 1);
+    box-shadow: 0px -10px 10px 0px rgba(0, 0, 0, 1);
     position: relative;
 }
 
@@ -715,16 +719,6 @@ a{
     }
 }
 @media screen and (min-width:62.5em){
-    .main-section{
-        background-image: linear-gradient(to top,rgb(38, 38, 38) 70px, rgb(33, 33, 33) 70px);
-    }
-    .info{
-        background-image: linear-gradient(to top,rgb(48, 48, 48) 120px, rgb(38, 38, 38) 120px);
-        padding-top: 60px;
-    }
-    .principal-projects{
-        background-image: linear-gradient(to top,rgb(58, 58, 58) 120px,rgb(48, 48, 48) 120px);
-    }
 
     .main-footer{
         background-image: linear-gradient(to top,rgb(31, 31, 31) 120px,rgb(58, 58, 58) 120px);
@@ -734,11 +728,14 @@ a{
         height: 80px;
     }
 
-    .info::after{
-        bottom: 60px;
+    .canAnimate{
+        position: relative;
+        top: 120px;
+        padding: 0;
     }
-    .principal-projects::after{
-        bottom: 80px;
+
+    .contact-section .canAnimate{
+        padding-bottom: 90px;
     }
 
     .navBar-noJs{
@@ -825,7 +822,7 @@ a{
     }
     
     .info .flex{
-        padding: 0;
+        padding: 0 0 30px;
         flex-direction: row-reverse;
         gap: 100px;
     }

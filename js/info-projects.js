@@ -31,8 +31,9 @@
     }
 
     //PROJECT DIV CLICK//
-    $projects.addEventListener("click", (e) => {
+    $projects.addEventListener("click", function(e) {
         if(e.target.classList.contains('complete')){
+            e.preventDefault
             var currentLength = Array.prototype.indexOf.call($project, e.target);
             e.target = projectInfoHide(currentLength);
         }
