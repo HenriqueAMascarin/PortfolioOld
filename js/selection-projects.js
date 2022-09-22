@@ -1,4 +1,4 @@
-(function(){
+ 
     const projects = document.querySelectorAll(".project-card");
     const ballSelection = document.querySelectorAll(".ball");
     const projectDiv = document.querySelector(".project-card");
@@ -8,7 +8,7 @@
 
     var currentLength = 0;
     var showingProjects;
-    var select = 3;
+    var select;
 
     function addClass(current){
         var x = 0;
@@ -19,13 +19,17 @@
     }
 
     function offset(){
+        console.log("entrou fucna")
+        $selectionbuttons.classList.add("selectionButtons-js");
         if(projectScroll.clientWidth < 704){
+            console.log("entrou 704" + projectScroll.clientWidth)
             showingProjects = 1;
-            $selectionbuttons.classList.add("selectionButtons-js");
-        }else if(projectScroll.clientWidth === 704){ //fixed value of clientWidth
+        }else if(projectScroll.clientWidth < 900){ //fixed value of clientWidth
             showingProjects = 2;
-            $selectionbuttons.classList.add("selectionButtons-js");
+            console.log("entrou === 704" + projectScroll.clientWidth)
         }else{
+            
+            console.log("entrou ultimo" + projectScroll.clientWidth)
             showingProjects = 3;
             $selectionbuttons.classList.remove("selectionButtons-js");
         }
@@ -56,17 +60,18 @@
         }
     }
 
-    window.addEventListener("resize", () => {
-        setTimeout(() => {
+    var timeout;
+    window.addEventListener("resize", function() {
+        clearTimeout(timeout)
+        timeout = setTimeout(function() {
+            offset();
             if(currentLength > 0){
                 currentLength -= 1;
             }
-            offset();
             if(select === 1){
                 UpdateCarousel("right");
-            }else if(select === 0){
+            }else{
                 UpdateCarousel("left");
             }
-        }, 600);     
+        }, 250);        
     });
-})()

@@ -278,7 +278,7 @@ a{
 }
 .main-section h1{
     color: #ffffff;
-    padding-top: 60px;
+    padding-top: 100px;
     font-size: clamp(35px, 10vw, 50px);
     white-space: pre-line;
 }
@@ -801,7 +801,7 @@ a{
     .flex h1{
         text-align: start;
         font-size: clamp(4em, 6vw, 5em);
-        padding: 0 0 20px 70px;
+        padding: 60px 0 20px 70px;
     }
 
     .photo-henrique{
