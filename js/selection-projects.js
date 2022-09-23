@@ -55,7 +55,6 @@
         if(sizeWindow != window.innerWidth){
             clearTimeout(timeout)
             timeout = setTimeout(function() {
-                alert("tela mudou");
                 size = window.innerWidth;
                 offset();
                 currentLength = 0;
