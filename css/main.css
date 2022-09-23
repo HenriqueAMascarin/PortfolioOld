@@ -167,7 +167,7 @@ a{
     top: 0;
     left: 0;
     right: 0;
-    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 1);;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 1);
 }
 
 .nav-menu{
@@ -381,9 +381,10 @@ a{
 }
 
 .projects{
+    --projects-showing: 1;
     --main-width-projects: clamp(16em, 70vw, 22em);
     margin: 25px 0 0;
-    width: var(--main-width-projects);
+    width: calc(var(--main-width-projects) * var(--projects-showing));
     position: relative;
     display: inline-flex;
     overflow-x: hidden;
@@ -458,6 +459,7 @@ a{
     transition: 0.3s ease-in-out;
     opacity: 1;
 }
+
 .titleAct-close{
     animation: 0;
     opacity: 0;
@@ -794,7 +796,7 @@ a{
         align-items: center;
         width: auto;
         height: auto;
-        gap: 80px;
+        gap: 75px;
         position: relative;
         z-index: 1;
     }
@@ -852,7 +854,7 @@ a{
     }
 
     .projects{
-        width: calc(var(--main-width-projects) * 2); 
+        --projects-showing: 2;
     }
     .project-container{
         flex-flow: row wrap;
@@ -898,6 +900,6 @@ a{
 
 @media screen and (min-width:77.77em){
     .projects{
-        width: calc(var(--main-width-projects) * 3); 
+        --projects-showing: 3;
     }
 }
