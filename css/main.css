@@ -505,7 +505,7 @@ a{
     height: 40px;
     display: none;
     position: relative;
-    bottom: 90px;
+    bottom: clamp(50px, 12vw, 80px);
 }
 .selectionButtons-js{
     display: flex;
