@@ -18,9 +18,6 @@ h1,h2,h3{
 section h2, section h3{
     padding-top: 60px;
 }
-span{
-    color: #ffffff;
-}
 
 p{
     font-family: Arial, Helvetica, sans-serif;
@@ -43,22 +40,31 @@ a{
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
-    
 }
+
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+    width: 10px;
+    background-color: #d53453;
+    border-radius: 10px;
+}
+
 .canAnimate{
     transition: 0.8s ease-in-out;
     padding-top: 50px;
 }
 
 .animation{
-    transform: translateY(-100%);
+    transform: translate3d(0, -100%, 0);
     opacity: 0;
 }
 
 .hiddenOverflow{
     overflow: hidden;
 }
-
 .preloader{
     display: none;
 }
@@ -73,7 +79,6 @@ a{
     justify-content: center;
     flex-direction: column;
 }
-
 .preloader p{
     margin-top: 0;
     max-width: 700px;
@@ -81,7 +86,7 @@ a{
     font-weight: bold;
     font-size: clamp(1.5em, 5vw, 3em);
 }
-@keyframes logo {
+@keyframes logo{
     0%, 100%{
         text-shadow: 2px 2px transparent,
                 0px 0px 15px #000000;
@@ -100,7 +105,6 @@ a{
 
     animation: logo 3s infinite ease-in-out;
 }
-
 .loading{
     display: block;
     width: clamp(200px, 60vw, 400px);
@@ -110,7 +114,6 @@ a{
     border: 5px solid #d53453;
     box-shadow: 0px 0px 10px #000000;
 }
-
 @keyframes loading{
     0%{
         width: 0%;
@@ -119,7 +122,6 @@ a{
         width: 100%;
     }
 }
-
 .loading::after{
     content: "";
     width: 100%;
@@ -130,17 +132,6 @@ a{
     animation: loading 3s ease-in-out;
 }
 
-::-webkit-scrollbar{
-    width: 10px;
-    background-color: transparent;
-}
-
-::-webkit-scrollbar-thumb{
-    width: 10px;
-    background-color: #d53453;
-    border-radius: 10px;
-}
-
 .hidden{
     width: 0;
     height: 0;
@@ -148,6 +139,7 @@ a{
     opacity: 0;
     display: block;
 }
+
 .red-text{
     color: #d53453;
 }
@@ -156,20 +148,16 @@ a{
     position: relative;
     z-index: 5;
 }
-
 .navBar{
     display: flex;
     justify-content: space-between;
     align-items: center;
     min-height: 60px;
+    width: 100%;
     background-image: linear-gradient(-45deg,rgb(31, 31, 31) 45%, rgb(213, 52, 83) 45.3%);
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
     box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 1);
 }
-
 .nav-menu{
     display: flex;
     justify-content: space-between;
@@ -183,7 +171,6 @@ a{
     width: 100%;
     transition: 0.3s;
 }
-
 .navBar-noJs{
     flex-direction: column;
     position: relative;
@@ -192,13 +179,11 @@ a{
     position: relative;
     left: 0;
 }
-
 .nav-item{
     margin: 14px 0;
     font-weight: bold;
     font-size: 1.5em;
 }
-
 .nav-link{
     color: #ffffff;
     text-shadow: none;
@@ -208,12 +193,10 @@ a{
     color: #d53453;
     text-shadow: 2px 2px #ffffff;
 }
-
 .nav-menu.active{
     left: 0;
     background-color: #d53453;
 }
-
 .hamburguer{
     display: block;
     cursor: pointer;
@@ -222,7 +205,6 @@ a{
 .hamburguer-noJs{
     display: none;
 }
-
 .bar{
     display: block;
     width: 35px;
@@ -232,7 +214,6 @@ a{
     transition: all 0.3s ease-in-out;
     background-color: white;
 }
-
 .hamburguer.active .bar{
     background: #d53453;
 }
@@ -240,10 +221,10 @@ a{
     opacity: 0;
 }
 .hamburguer.active .bar:nth-child(1){
-    transform: translateY(8px) rotate(45deg);
+    transform: translate3d(0, 8px, 0) rotate3d(0,0,1,45deg);
 }
 .hamburguer.active .bar:nth-child(3){
-    transform: translateY(-8px) rotate(-45deg);
+    transform: translate3d(0, -8px, 0) rotate3d(0,0,1,-45deg);
 }
 
 .icons{
@@ -255,14 +236,12 @@ a{
     gap: 25px;
     margin: 0 0 0 3%;
 }
-
 .icons a{
     transition: .4s color cubic-bezier(.57,.21,.69,1.25);
 }
 .icons a:hover{
     color: #1c1c1cc9;
 }
-
 .logotipo{
     font-size: 5em;
     display: inline-block;
@@ -292,7 +271,6 @@ a{
     display: block;
     box-shadow: 0px 10px 10px -4px rgba(0, 0, 0, 1);
 }
-
 .circles{
     background-image: url(../images/bolinhas.svg);
     height: 780px;
@@ -305,12 +283,13 @@ a{
 
 @keyframes moving{
     0%, 100%{
-        transform: translateY(0px);
+        transform: translate3d(0, 0px, 0);
     }
     50%{
-        transform: translateY(-15px);
+        transform: translate3d(0, -15px, 0);
     }
 }
+
 .photo-henrique{
     filter: drop-shadow(4px 0px 0px rgb(213, 52, 83))  
             drop-shadow(-4px 0px 0px rgb(255, 255, 255))
@@ -321,7 +300,21 @@ a{
     margin-top: 40px;
     z-index: 4;
 }
-
+.info{
+    background-color: rgb(38, 38, 38);
+    position: relative;
+    z-index: 3;
+}
+.info p{
+    margin: 20px auto 0;
+    max-width: 600px;
+}
+.info p:nth-child(3){
+    margin: 30px auto 0;
+}
+.info article{
+    margin-bottom: 40px;
+}
 .pixel-art{
     display: inline-block;
     width: clamp(181.6px, 80vw, 271px);
@@ -329,26 +322,6 @@ a{
     filter: drop-shadow(0px 0px 5px rgb(0, 0, 0)); 
     animation: moving 3s infinite ease-in-out;
 }
-
-.info{
-    background-color: rgb(38, 38, 38);
-    position: relative;
-    z-index: 3;
-}
-
-.info p{
-    margin: 20px auto 0;
-    max-width: 600px;
-}
-
-.info p:nth-child(3){
-    margin: 30px auto 0;
-}
-
-.info article{
-    margin-bottom: 40px;
-}
-
 .info::after{
     content: "";
     height: 40px;
@@ -375,17 +348,16 @@ a{
     display: block;
     box-shadow: 0px 10px 10px -4px rgba(0, 0, 0, 1);
 }
-
  .project-image, .title-project{
     pointer-events: none;
 }
-
 .projects{
     --projects-showing: 1;
     --main-width-projects: clamp(16em, 70vw, 22em);
     margin: 25px 0 0;
     width: calc(var(--main-width-projects) * var(--projects-showing));
     position: relative;
+    z-index: 1;
     display: inline-flex;
     overflow-x: hidden;
     border-radius: 100px;
@@ -398,11 +370,9 @@ a{
     transition: all 0.2s;
     align-items: flex-start;
 }
-
 .projects-js{
     flex-flow: row nowrap;
 }
-
 .project-card{
     width: var(--main-width-projects);
     transition: all 0.5s ease;
@@ -425,7 +395,6 @@ a{
     filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 1))
             drop-shadow(0px 0px 6px rgba(213, 52, 83, 1));
 }
-
 .project-image{
     width: var(--main-width-projects);
     filter: brightness(60%);
@@ -437,12 +406,13 @@ a{
 
 @keyframes scaleFont{
     0%, 100%{
-        transform: scale(1);
+        transform: scale3d(1, 1, 1);
     }
     50%{
-        transform: scale(1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
     }
 }
+
 .title-project{
     font-family: 'Farro', Arial, Helvetica, sans-serif;
     color: #d53453;
@@ -459,35 +429,31 @@ a{
     transition: 0.3s ease-in-out;
     opacity: 1;
 }
-
 .titleAct-close{
     animation: 0;
     opacity: 0;
 }
-
 .project-info{
-    background-color: #1f1f1f;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
-    position: relative;
-    padding: 22% 0 10%;
     width: 80%;
-    z-index: 1;
-    bottom: clamp(80px, 20vw, 120px);
+    padding: 22% 0 10%;
+    background-color: #1f1f1f;
     display: inline-block;
     align-items: center;
     flex-flow: column nowrap;
+    z-index: 1;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+    position: relative;
+    bottom: clamp(80px, 20vw, 120px);
     border-radius: 20px;
     transition: 0.3s ease-in-out;
     transform-origin: top;
-    transform: scaleY(1);
+    transform: scale3d(1, 1, 1);
 }
-
 .projectInfo-close{
-    transform: scaleY(0);
+    transform: scale3d(1, 0, 1);
     bottom: 100px;
     height: 0;
 }
-
 .used-logos{
     display: flex;
     align-items: center; 
@@ -505,7 +471,6 @@ a{
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 1),
                 0px 0px 10px rgba(213, 52, 83, 1);
 }
-
 .logo-project{
     width: 55%;
     filter: drop-shadow(0px 0px 1px rgb(255, 255, 255));
@@ -513,33 +478,34 @@ a{
 .span-logos:nth-child(1), .span-logos:nth-child(3){
     margin-bottom: 20px;
 }
-
 .project-info p{
     margin: 20px 0 50px;
     font-weight: 600;
     font-size: clamp(1.3em, 4vw, 1.6em);
 }
 .project-button{
+    display: inline-block;
     padding: 10px;
     background-color: #d53453;
     border-radius: 12px;
     font-size: clamp(1.5em, 4vw, 2em);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 1),
                 0px 0px 10px rgba(0, 0, 0, 1);
-    transition: .3s all ease-in-out;
+    transition: .3s ease-in-out;
 }
 .project-button:hover, .project-button:focus{
+    transform: scale3d(1.04, 1.04, 1.04);
     outline: 0;
-    transform: scale(1.1);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 1),
                 0px 0px 5px rgb(213, 52, 83);
 }
 
 .selection-buttons{
+    z-index: 1;
     height: 40px;
     display: none;
     position: relative;
-    bottom: 60px;
+    bottom: 90px;
 }
 .selectionButtons-js{
     display: flex;
@@ -550,7 +516,6 @@ a{
 }
 .ball{
     position: relative;
-    z-index: 1;
     width: 50px;
     height: 45px;
     background-color: #ffffff;
@@ -565,14 +530,12 @@ a{
     pointer-events: auto;
     border: 0;
 }
-
 .ball::before{
     color: #d53453;
     font-size: 1.8em;
     text-shadow: 0px 0px 5px #ffffff,
                 0px 0px 5px #ffffff;
 }
-
 .currentButton{
     background-color: #d53453;
 }
@@ -584,7 +547,6 @@ a{
 .contact-section h2{
     margin-bottom: 20px;
 }
-
 .contact-div{
     margin-bottom: 50px;
     position: relative;
@@ -594,7 +556,6 @@ a{
     display: flex;
     flex-flow: column nowrap;
 }
-
 .text-contact{
     background-color: #1f1f1f;
     border: 0;
@@ -608,7 +569,6 @@ a{
     font-weight: bold;
     border-bottom: 3px solid #d53453;
 }
-
 .input_focus{
     transition: .3s all ease-in-out;
 }
@@ -622,7 +582,6 @@ a{
     resize: none;
     height: 10rem;
 }
-
 .contact-button{
     height: 4rem;
     background-color: #1f1f1f;
@@ -653,7 +612,6 @@ a{
     box-shadow: 0px -10px 10px 0px rgba(0, 0, 0, 1);
     position: relative;
 }
-
 .portfolio{
     display: flex;
     flex-flow: column nowrap;
@@ -685,14 +643,13 @@ a{
     border: 2px solid #ffffff;
     display: block;
     font-size: 1.4em;
-    transition: .3s all ease-in-out;
+    transition: .3s ease-in-out;
 }
 .portfolio a:hover, .portfolio a:focus{
-    transform: scale(2px);
+    transform: scale3d(1.04, 1.04, 1.04);
     box-shadow: 6px 6px 1px #ffffff;
     outline: 0;
 }
-
 .copyright{
     display: inline-block;
     padding: 0 30px;
@@ -706,6 +663,7 @@ a{
 .copyright:hover{
     color: rgb(226, 226, 226);
 }
+
 @media screen and (max-width:20em){
     .circles{
         background-image: url(../images/bolinhas.svg);
@@ -721,13 +679,22 @@ a{
     }
 }
 @media screen and (min-width:62.5em){
-
     .main-footer{
         background-image: linear-gradient(to top,rgb(31, 31, 31) 120px,rgb(58, 58, 58) 120px);
     }
 
     .main-section::after, .info::after, .main-footer::before, .principal-projects::after{
         height: 80px;
+    }
+
+    .main-section .flex{
+        padding: 130px 100px 0;
+    }
+    
+    .circles{
+        background-image: url(/images/bolinhas-pc.svg);
+        height: 840px; 
+        background-size: clamp(40em, 100vw, 75em) 55em;
     }
 
     .canAnimate{
@@ -744,7 +711,6 @@ a{
         flex-direction: row;
         position: relative;
     }
-
     .navBar{
         align-items: baseline;
         background: #1f1f1f; 
@@ -789,6 +755,7 @@ a{
         margin-left: auto;
         position: relative;
     }
+
     .flex{
         display: flex;
         flex-flow: row nowrap;
@@ -812,42 +779,28 @@ a{
         top: 50px;
         width: clamp(25em, 40vw, 28em);
     }
-
-    .main-section .flex{
-        padding: 130px 100px 0;
-    }
-    
-    .circles{
-        background-image: url(/images/bolinhas-pc.svg);
-        height: 840px; 
-        background-size: clamp(40em, 100vw, 75em) 55em;
-    }
     
     .info .flex{
         padding: 0 0 30px;
         flex-direction: row-reverse;
         gap: 100px;
     }
-
     .info article{
         padding-bottom: 80px;
         margin: 0;
     }
-
     .info p{
         margin: 20px 0 0;
         font-size: clamp(1.5em, 5vw, 1.8em);
         max-width: 20em;
     }
-
     .info p:nth-child(3){
         margin: 30px 0 0;
     }
-
     .pixel-art{
         padding: 0 0 20px 90px;
     }
-
+    
     .info h2 , .principal-projects h2, .contact-section h2{
         font-size: 5em;
         padding-top: 0px;
@@ -857,7 +810,7 @@ a{
         --projects-showing: 2;
     }
     .project-container{
-        flex-flow: row wrap;
+        flex-flow: row nowrap;
     }
     .projects-js{
         flex-flow: row nowrap;
@@ -874,8 +827,6 @@ a{
     }
     .portfolio{
         top: -30px;
-    }
-    .portfolio-contact{
         display: flex;
         flex-flow: row nowrap;
         justify-content: center;
@@ -883,12 +834,12 @@ a{
         gap: 130px;
         font-size: 1.2em;
     }
-    .portfolio-contact h2{
+    .portfolio h2{
         margin: 0;
         padding: 0;
         width: 50%;
     }
-    .portfolio-contact a{
+    .portfolio a{
         margin: 0;
         width: 30%;
     }

@@ -30,7 +30,7 @@ body{
 
 @keyframes movingY {
     50%{
-        transform: translateY(-15px);
+        transform: translate3d(0, -15px, 0);
     }
 }
 

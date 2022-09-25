@@ -1,13 +1,13 @@
 (function(){
-    const loader = document.querySelector(".preloader");
-    loader.classList.add("preloader-js");
-    var windowDisplay = document.querySelector("body");
-    windowDisplay.classList.add("hiddenOverflow");
+    const $loader = document.querySelector(".preloader");
+    var $windowDisplay = document.querySelector("body");
+    $loader.classList.add("preloader-js");
+    $windowDisplay.classList.add("hiddenOverflow");
 
-    window.addEventListener("load", () =>{
+    window.addEventListener("load", () => {
         setTimeout(() => {
-            windowDisplay.classList.remove("hiddenOverflow")
-            loader.remove();
+            $windowDisplay.classList.remove("hiddenOverflow")
+            $loader.remove();
         }, 3000);
     });
-})()
+})();

@@ -2,6 +2,7 @@
     const $hamburguer = document.querySelector(".hamburguer");
     const $navMenu = document.querySelector(".nav-menu");
     const $navBar = document.querySelector(".navBar");
+    const navLink = document.querySelectorAll(".nav-link");
 
     $navMenu.classList.remove("navMenu-noJs");
     $navBar.classList.remove("navBar-noJs");
@@ -22,9 +23,11 @@
         aria();
     })
 
-    document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
-        $hamburguer.classList.remove("active");
-        $navMenu.classList.remove("active");
-        aria();
-    }))
+    navLink.forEach(function(element) {
+        element.addEventListener("click", () => {
+            $hamburguer.classList.remove("active");
+            $navMenu.classList.remove("active");
+            aria();
+        })
+    })
 })();

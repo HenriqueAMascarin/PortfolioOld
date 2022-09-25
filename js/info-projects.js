@@ -6,7 +6,7 @@
     const $projectInfo = document.querySelectorAll(".project-info");
     const $title = document.querySelectorAll(".title-project");
     const $projectImage = document.querySelectorAll(".project-image");
-
+    
     const $selectionbuttons = document.querySelector(".selection-buttons");
         
     (function javaScriptEnable(){    
@@ -33,7 +33,7 @@
     //PROJECT DIV CLICK//
     $projects.addEventListener("click", function(e) {
         if(e.target.classList.contains('complete')){
-            e.preventDefault
+            e.preventDefault;
             var currentLength = Array.prototype.indexOf.call($project, e.target);
             e.target = projectInfoHide(currentLength);
         }

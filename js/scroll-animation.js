@@ -1,8 +1,8 @@
 (function(){
     const sections = document.querySelectorAll("section:not(:first-child)");
-    const target = document.querySelectorAll(".canAnimate");
+    const $target = document.querySelectorAll(".canAnimate");
 
-    target.forEach(function(element){
+    $target.forEach(function(element){
         element.classList.add("animation");
     })
 
@@ -11,16 +11,16 @@
         sections.forEach(function(element){
             var currentLength = Array.prototype.indexOf.call(sections, element);
             if(windowTop > element.offsetTop){
-                target[currentLength].classList.remove("animation");
+                $target[currentLength].classList.remove("animation");
             }else{
-                target[currentLength].classList.add("animation");
+                $target[currentLength].classList.add("animation");
             }   
         });
     }
 
-    window.addEventListener("scroll", () =>{
-        if(target.length){
+    window.addEventListener("scroll", () => {
+        if($target.length){
             animeScroll();
         }
     });
-})()
+})();
