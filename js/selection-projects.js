@@ -9,6 +9,7 @@
     var currentLength = 0;
     var showingProjects = 0;
     var timeout;
+    
 
     function addClass(current){
         $ballSelection.forEach(function(element){
