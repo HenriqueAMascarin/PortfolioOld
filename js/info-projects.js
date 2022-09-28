@@ -8,7 +8,9 @@
     const $projectImage = document.querySelectorAll(".project-image");
     
     const $selectionbuttons = document.querySelector(".selection-buttons");
-        
+
+    var ariaHidden = true;
+
     (function javaScriptEnable(){    
         $projects.classList.add("projects-js");
         $selectionbuttons.classList.add("selectionButtons-js");
@@ -16,14 +18,15 @@
             $projectInfo[i].classList.add("projectInfo-close");
             $title[i].classList.add("titleAct-close");
             $projectImage[i].classList.add("projectImage-close");
+            
+            $projectInfo[i].setAttribute("aria-hidden", ariaHidden);
         }
     })()
     
 
     function projectInfoHide(currentLength){
-            var ariaExpanded = $projectCard[currentLength].getAttribute("aria-expanded") === "true";
-            $projectCard[currentLength].setAttribute("aria-expanded", !ariaExpanded);
-            $projectInfo[currentLength].setAttribute("aria-expanded", !ariaExpanded);
+            ariaHidden = $projectInfo[currentLength].getAttribute("aria-hidden") === "true";
+            $projectInfo[currentLength].setAttribute("aria-hidden", !ariaHidden);
 
             $projectInfo[currentLength].classList.toggle("projectInfo-close");
             $title[currentLength].classList.toggle("titleAct-close");

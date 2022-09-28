@@ -8,13 +8,10 @@
     $navBar.classList.remove("navBar-noJs");
     $hamburguer.classList.remove("hamburguer-noJs");
 
-    const ariaControl = $navBar.getAttribute("aria-controls");
-    const $menu = document.getElementById(ariaControl);
-
     function aria(ariaExpanded){
         var ariaExpanded = $navBar.getAttribute("aria-expanded") === "true";
         $navBar.setAttribute("aria-expanded", !ariaExpanded);
-        $menu.setAttribute("aria-expanded", !ariaExpanded);
+        $navMenu.setAttribute("aria-expanded", !ariaExpanded);
     }
 
     $hamburguer.addEventListener("click", () => {
