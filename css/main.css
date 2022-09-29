@@ -361,16 +361,30 @@ a{
     border-radius: 100px;
     transition: all 0.5s ease;
 }
+
+.projects-noJs{
+    overflow-x: auto;
+}
+.projects-noJs::-webkit-scrollbar-track {
+    border-radius: 30px;
+    background-color: #ffffff;
+}
+  
+.projects-noJs::-webkit-scrollbar {
+    height: 60px;
+}
+.projects-noJs::-webkit-scrollbar-thumb {
+    border-radius: 30px;
+}
+
 .project-container{
     display: inline-flex;
-    flex-flow: column wrap;
+    flex-flow: row nowrap;
     justify-content: left;
     transition: all 0.2s;
     align-items: flex-start;
 }
-.projects-js{
-    flex-flow: row nowrap;
-}
+
 .project-card{
     width: var(--main-width-projects);
     transition: all 0.5s ease;
@@ -779,8 +793,6 @@ a{
     }
 
     .projects{--projects-showing: 2;}
-    .project-container{flex-flow: row nowrap;}
-    .projects-js{flex-flow: row nowrap;}
 
     .textarea, .text-contact{max-width: 700px;}
     .contact-button{max-width: 400px;}

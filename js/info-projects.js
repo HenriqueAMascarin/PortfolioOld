@@ -1,7 +1,7 @@
 (function(){
     const $projects = document.querySelector(".project-container");
     const $project = document.querySelectorAll(".project-div");
-    const $projectCard = document.querySelectorAll(".project-card");
+    const $projectFather = document.querySelector(".projects")
 
     const $projectInfo = document.querySelectorAll(".project-info");
     const $title = document.querySelectorAll(".title-project");
@@ -12,7 +12,7 @@
     var ariaHidden = true;
 
     (function javaScriptEnable(){    
-        $projects.classList.add("projects-js");
+        $projectFather.classList.remove("projects-noJs");
         $selectionbuttons.classList.add("selectionButtons-js");
         for(var i = 0; i < $project.length && $project[i].classList.contains("complete"); i++){
             $projectInfo[i].classList.add("projectInfo-close");
