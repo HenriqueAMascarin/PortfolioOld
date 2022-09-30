@@ -160,7 +160,7 @@ a{
     box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 1);
 }
 .nav-menu{
-    display: flex;
+    display: inline-flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
@@ -229,10 +229,8 @@ a{
 
 .icons{
     width: fit-content;
-    display: inline-flex;
+    display: flex;
     height: 60px;
-    align-items: center;
-    justify-content: center;
     gap: 25px;
     margin: 0 0 0 3%;
 }
@@ -246,8 +244,8 @@ a{
 .icons a:hover{
     filter: invert(0%) sepia(5%) saturate(6756%) hue-rotate(339deg) brightness(103%) contrast(78%);
 }
-.icon-github{background: center no-repeat url(/images/github.svg);}
-.icon-linkedin{background: center no-repeat url(/images/linkedin.svg);}
+.icon-github{background: center  no-repeat url(/images/github.svg);}
+.icon-linkedin{background: center  no-repeat url(/images/linkedin.svg);}
 .logotipo{
     font-size: 5em;
     display: inline-block;
@@ -714,18 +712,17 @@ a{
     }
     .contact-section .canAnimate{padding-bottom: 90px;}
 
-    .navBar{
-        background: #1f1f1f; 
-    }
-    
     .icons a{
         background-size: clamp(50px, 4vw, 60px);
         width: clamp(50px, 4vw, 60px);
     }
     .icons a:hover{filter: invert(24%) sepia(85%) saturate(1509%) hue-rotate(322deg) brightness(104%) contrast(93%);}
     
+    .navBar{
+        background: #1f1f1f;
+    }
+
     .nav-menu{
-        display: inline-flex;
         left:0;
         top: 0;
         justify-content: center;
@@ -736,9 +733,10 @@ a{
 
     .hamburguer{display: none;}
     .nav-menu.active{background-color: #1f1f1f;;}
+    .nav-item{margin: 0;}
     .nav-menu li:not(.logotipo){font-size: clamp(2.5em, 4vw, 3.4em);}
     .nav-menu li:nth-child(1){margin-left: auto;}
-    .nav-menu li:nth-child(2){ margin: 14px 60px;}
+    .nav-menu li:nth-child(2){margin: 0px 60px;}
     
     .logotipo{
         padding: 0 4%;
@@ -766,7 +764,7 @@ a{
     }
 
     .photo-henrique{
-        margin: 20px 20px 0;
+        margin: 20px 20px 0 0;
         position: relative;
         top: 50px;
         width: clamp(25em, 40vw, 28em);
