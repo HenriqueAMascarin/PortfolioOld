@@ -234,10 +234,9 @@ a{
     filter: invert(100%) sepia(3%) saturate(12%) hue-rotate(348deg) brightness(103%) contrast(103%);
     width: clamp(35px, 15vw, 50px);
     height: 100%;
+    outline: 0;
 }
-.icons a:hover{
-    filter: invert(0%) sepia(5%) saturate(6756%) hue-rotate(339deg) brightness(103%) contrast(78%);
-}
+.icons a:hover{filter: invert(0%) sepia(5%) saturate(6756%) hue-rotate(339deg) brightness(103%) contrast(78%);}
 .icon-github{background: center  no-repeat url(/images/github.svg);}
 .icon-linkedin{background: center  no-repeat url(/images/linkedin.svg);}
 .logotipo{
@@ -708,7 +707,7 @@ a{
         background-size: clamp(50px, 4vw, 60px);
         width: clamp(50px, 4vw, 60px);
     }
-    .icons a:hover{filter: invert(24%) sepia(85%) saturate(1509%) hue-rotate(322deg) brightness(104%) contrast(93%);}
+    .icons a:hover, .icons a:focus{filter: invert(24%) sepia(85%) saturate(1509%) hue-rotate(322deg) brightness(104%) contrast(93%);}
 
     .navBar{
         background: #1f1f1f;
