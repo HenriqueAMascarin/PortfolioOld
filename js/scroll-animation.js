@@ -7,7 +7,7 @@
     })
 
     function animeScroll(){
-        const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4);
+        const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4.55);
         sections.forEach(function(element){
             var currentLength = Array.prototype.indexOf.call(sections, element);
             if(windowTop > element.offsetTop){
