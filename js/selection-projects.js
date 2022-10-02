@@ -9,7 +9,6 @@
     var currentLength = 0;
     var showingProjects = 0;
     var timeout;
-    
 
     function addClass(current){
         $ballSelection.forEach(function(element){
@@ -20,7 +19,7 @@
 
     function offset(){
         showingProjects = parseInt(getComputedStyle(projectScroll).getPropertyValue('--projects-showing'));
-        if(showingProjects === 3){
+        if((projects.length - showingProjects) === 0){
             $selectionbuttons.classList.remove("selectionButtons-js");
             return;
         }
@@ -43,18 +42,6 @@
     function UpdateCarousel(){
         var projectWidth = projects[0].clientWidth;
         $projectContainer.style.transform = "translate3d(-" + (projectWidth * currentLength) + "px, 0, 0)";
-    }
-    
-    if(showingProjects != 3){
-        setInterval(() => {
-            if(currentLength < projects.length - showingProjects){
-                currentLength++;
-                UpdateCarousel();
-            }else if(currentLength === projects.length - showingProjects){
-                currentLength = 0;
-                UpdateCarousel();
-            }
-        }, 5000);
     }
     
     window.addEventListener("resize", () => {
