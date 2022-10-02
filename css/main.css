@@ -1,11 +1,5 @@
 @charset "UTF-8";
 
-@font-face{
-    font-family: farro;
-    src: url(/fonts/Farro-Bold.ttf), url(/fonts/Farro-Light.ttf), url(/fonts/Farro-Medium.ttf), url(/fonts/Farro-Regular.ttf);
-    font-display: swap;
-}
-
 html{
     font-family: farro, Arial, Helvetica, sans-serif;
     text-align: center;
@@ -304,7 +298,8 @@ a{
     height: 100%;
     animation: moving 3s infinite ease-in-out;
     margin-top: 40px;
-    z-index: 4;
+    position: relative;
+    z-index: 1;
 }
 .info{
     background-color: rgb(38, 38, 38);
@@ -747,7 +742,7 @@ a{
         align-items: center;
         width: auto;
         height: auto;
-        gap: 75px;
+        gap: 90px;
         position: relative;
         z-index: 1;
     }
@@ -758,10 +753,10 @@ a{
     }
 
     .photo-henrique{
-        margin: 20px 20px 0 0;
+        margin: 40px 40px 20px 0;
         position: relative;
         top: 50px;
-        width: clamp(25em, 40vw, 28em);
+        width: clamp(25em, 40vw, 25em);
     }
     
     .info .flex{

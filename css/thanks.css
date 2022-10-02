@@ -1,12 +1,5 @@
 @charset "UTF-8";
 
-@font-face{
-    font-family: farro;
-    src: url(/fonts/Farro-Bold.ttf), url(/fonts/Farro-Light.ttf), url(/fonts/Farro-Medium.ttf), url(/fonts/Farro-Regular.ttf);
-    font-display: swap;
-}
-
-
 html{
     font-family: farro, Arial, Helvetica, sans-serif;
     text-align: center;
