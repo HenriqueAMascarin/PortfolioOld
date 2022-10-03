@@ -24,6 +24,7 @@ Seja bem-vindo ao meu portfólio ❤️
 
 ### Destaque
 
+- Design único
 - Mobile-first
 - Projeto responsivo
 - Scroll lento nos links
