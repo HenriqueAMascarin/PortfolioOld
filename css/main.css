@@ -712,6 +712,10 @@ a{
     .navBar{
         background: #1f1f1f;
     }
+    .navBar-noJs{
+        flex-direction: row;
+        position: fixed;
+    }
     .nav-menu{
         left:0;
         top: 0;
