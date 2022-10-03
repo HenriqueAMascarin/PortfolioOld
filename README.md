@@ -33,7 +33,7 @@ Seja bem-vindo ao meu portfólio ❤️
 - Carrossel de projetos
 - Formulário de contato (FormSubmit) e página de agradecimento
 - Acessibilidade com ARIA
-- Funciona 100% sem JavaScript
+- Funcionamento sem JavaScript
 
 ### Aprendizado
 
