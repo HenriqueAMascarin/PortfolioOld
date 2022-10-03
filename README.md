@@ -31,6 +31,8 @@ Seja bem-vindo ao meu portfólio ❤️
 - Animações no scroll
 - Carrossel de projetos
 - Formulário de contato (FormSubmit) e página de agradecimento
+- Acessibilidade com ARIA
+- Funciona 100% sem JavaScript
 
 ### Aprendizado
 
