@@ -24,6 +24,7 @@ Seja bem-vindo ao meu portfólio ❤️
 
 ### Destaque
 
+- Design único
 - Mobile-first
 - Projeto responsivo
 - Scroll lento nos links
@@ -31,6 +32,8 @@ Seja bem-vindo ao meu portfólio ❤️
 - Animações no scroll
 - Carrossel de projetos
 - Formulário de contato (FormSubmit) e página de agradecimento
+- Acessibilidade com ARIA
+- Funcionamento sem JavaScript
 
 ### Aprendizado
 
